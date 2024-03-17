@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Accueil</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">UAP Immo</div>
+            <ul>
+                <li><a href="/"></a></li>
+                <li><a href="/inscription">Inscription</a></li>
+                <% if (user) { %>
+                    <!-- Si l'utilisateur est connecté -->
+                    <li><a href="/deconnexion">Déconnexion</a></li>
+                <% } else { %>
+                    <!-- Si l'utilisateur n'est pas connecté -->
+                    <li><a href="/connexion" class="button">Connexion</a></li>
+                <% } %>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        
+            <h2>Accueil</h2>
+            
+    </div>
+
+    <footer>
+        <p>&copy; 2024 UAP Immo. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
