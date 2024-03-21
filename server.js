@@ -21,7 +21,8 @@ app.use(flash());
 
 // Définition du schéma utilisateur MongoDB
 const User = mongoose.model('User', {
-  username: String,
+  nom: String,
+  prenom: String,
   email: String,
   password: String,
 });
@@ -29,8 +30,8 @@ const User = mongoose.model('User', {
 // Configuration de Passport
 passport.use(new LocalStrategy(async (username, password, done) => {
   try {
-    const user = await User.findOne({ username: username }).exec();
-    if (!user) return done(null, false, { message: 'Nom d\'utilisateur incorrect.' });
+    const user = await User.findOne({ email: username }).exec();
+    if (!user) return done(null, false, { message: 'Adresse e-mail incorrecte.' });
     if (!bcrypt.compareSync(password, user.password)) return done(null, false, { message: 'Mot de passe incorrect.' });
     return done(null, user);
   } catch (err) {
@@ -69,7 +70,7 @@ app.get('/inscription', (req, res) => {
 
 app.post('/inscription', async (req, res) => {
   try {
-    const { username, email, password, passwordConfirmation } = req.body;
+    const { nom, prenom, email, password, passwordConfirmation } = req.body;
 
     // Vérifier si les mots de passe correspondent
     if (password !== passwordConfirmation) {
@@ -80,7 +81,8 @@ app.post('/inscription', async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, 10);
 
     const user = new User({
-      username: username,
+      nom: nom,
+      prenom: prenom,
       email: email,
       password: hashedPassword,
     });
