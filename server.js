@@ -125,6 +125,6 @@ app.get('/deconnexion', (req, res) => {
   });
 });
 
-app.listen(3001, () => {
-  console.log('Le serveur est en écoute sur le port 3001');
+app.listen(3000, () => {
+  console.log('Le serveur est en écoute sur le port 3000');
 });
