@@ -1,34 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - UAP Immo</title>
     <link rel="stylesheet" href="/style.css">
-    <title>Accueil</title>
 </head>
 <body>
     <header>
+        <h1 class="logo">UAP Immo</h1>
         <nav>
-            <div class="logo">UAP Immo</div>
-            <ul>
-                <li><a href="/"></a></li>
-                <li><a href="/inscription">Inscription</a></li>
-                <% if (user) { %>
-                    <!-- Si l'utilisateur est connecté -->
-                    <li><a href="/deconnexion">Déconnexion</a></li>
-                <% } else { %>
-                    <!-- Si l'utilisateur n'est pas connecté -->
-                    <li><a href="/connexion" class="button">Connexion</a></li>
-                <% } %>
-            </ul>
+            <a href="/connexion" class="button">Connexion</a>
+            <a href="/inscription" class="button">Inscription</a>
         </nav>
     </header>
-    <div class="container">
-        
-            <h2>Check modifs</h2>
-            
-    </div>
-
+    <main>
+        <section class="hero">
+            <h2 class="hero-title">Bienvenue sur UAP Immo</h2>
+            <p class="hero-description">Trouvez votre futur logement facilement avec notre application mobile conviviale.</p>
+        </section>
+    </main>
     <footer>
         <p>&copy; 2024 UAP Immo. Tous droits réservés.</p>
     </footer>
