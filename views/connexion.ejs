@@ -1,44 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - UAP Immo</title>
     <link rel="stylesheet" href="/style.css">
-    <title>Connexion</title>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">UAP Immo</div>
-            <ul>
-                <li><a href="/">Accueil</a></li>
-                <li><a href="/inscription">Inscription</a></li>
-                <% if (user) { %>
-                    <!-- Si l'utilisateur est connecté -->
-                    <li><a href="/deconnexion">Déconnexion</a></li>
-                <% } else { %>
-                    <!-- Si l'utilisateur n'est pas connecté -->
-                    <li><a href="/connexion">Connexion</a></li>
-                <% } %>
-            </ul>
-        </nav>
+        <h1 class="logo">UAP Immo</h1>
     </header>
-    <div class="container">
+    <main>
         <section class="form-container">
             <h2>Connexion</h2>
-            <form action="/connexion" method="post">
+            <form action="/connexion" method="post" class="auth-form">
                 <label for="username">Nom d'utilisateur:</label>
                 <input type="text" id="username" name="username" required>
-
                 <label for="password">Mot de passe:</label>
                 <input type="password" id="password" name="password" required>
-
-                <button type="submit">Se connecter</button>
+                <button type="submit" class="button">Se connecter</button>
             </form>
-            <p>Vous n'avez pas de compte? <a href="/inscription" id="link-form">Inscrivez-vous ici</a>.</p>
+            <p>Pas encore de compte? <a href="/inscription" class="link">Inscrivez-vous ici</a>.</p>
         </section>
-    </div>
-
+    </main>
     <footer>
         <p>&copy; 2024 UAP Immo. Tous droits réservés.</p>
     </footer>
