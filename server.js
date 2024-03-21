@@ -74,9 +74,18 @@ app.post('/inscription', async (req, res) => {
     const { username, email, password, passwordConfirmation, firstName, lastName } = req.body;
 
     // Vérifier si les mots de passe correspondent
-    if (password !== passwordConfirmation) {
-      return res.render('inscription', { message: 'Les mots de passe ne correspondent pas.' });
-    }
+    console.log('Nom d\'utilisateur:', username);
+    console.log('Email:', email);
+    console.log('Prénom:', firstName); // Vérifier si le prénom est reçu
+    console.log('Nom:', lastName); // Vérifier si le nom est reçu
+
+    // Reste de votre logique d'enregistrement
+  } catch (error) {
+    console.error('Erreur lors de l\'inscription:', error);
+    res.render('inscription', { message: 'Erreur lors de l\'inscription.' });
+  }
+});
+
 
     // Hasher le mot de passe
     const hashedPassword = await bcrypt.hash(password, 10);
