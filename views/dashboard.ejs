@@ -1,82 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - UAP Immo</title>
     <link rel="stylesheet" href="/style.css">
-    <title>Tableau de bord</title>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="logo">UAP Immo</div>
-            <ul>
-                <li><a href="/">Accueil</a></li>
-                <li><a href="/inscription">Inscription</a></li>
-                <% if (user) { %>
-                    <!-- Si mon utilisateur est connecté -->
-                    <li><a href="/deconnexion">Déconnexion</a></li>
-                <% } else { %>
-                    <!-- Si mon utilisateur n'est pas connecté -->
-                    <li><a href="/connexion">Connexion</a></li>
-                <% } %>
-            </ul>
-        </nav>
+        <h1 class="logo">UAP Immo</h1>
     </header>
-    <p class="dashboard-h2">Hello <%= user.username %>!</p>
-    <section class="dashboard">
-        <!-- Menu Vertical -->
-        <div class="menu">
-            <ul>
-                <li><a href="#" id="menu1">Profil</a></li>
-                <li><a href="#" id="menu2">Landing Page</a></li>
-            </ul>
+    <main>
+        <div class="dashboard">
+            <nav class="menu">
+                <ul>
+                    <li><a href="#profil">Profil</a></li>
+                    <li><a href="#modifier-mot-de-passe">Modifier mot de passe</a></li>
+                    <li><a href="#section-template">Section Template</a></li>
+                    <!-- Ajoutez d'autres sections ici -->
+                </ul>
+            </nav>
+            <section class="content">
+                <h2 class="dashboard-h2">Profil</h2>
+                <div class="profile-info">
+                    <p><strong>Nom:</strong> <%= user.username %></p>
+                    <p><strong>Prénom:</strong> <%= user.firstname %></p>
+                    <p><strong>Identifiant:</strong> <%= user.id %></p>
+                    <!-- Ajoutez d'autres informations de profil ici -->
+                </div>
+            </section>
         </div>
-
-        <!-- Mon Contenu Dynamique -->
-        <div class="content">
-            <div id="menu1Content" class="menu-content">
-                <h2>Gestion profil</h2>
-                <p>Identifiant: <%= user.username %></p>
-            </div>
-
-            <div id="menu2Content" class="menu-content" style="display: none;">
-                <h2>Landing Page</h2>
-                <p>url :</p>
-                <p>url :</p>
-                <p>url :</p>    
-                <p>url :</p>
-                
-            </div>
-            
-        </div>
-    </section>
-
+    </main>
     <footer>
         <p>&copy; 2024 UAP Immo. Tous droits réservés.</p>
     </footer>
-
-    <!-- JavaScript pour gérer l'affichage dynamique de mon contenu -->
-    <script>
-        // Fonction pour basculer l'affichage du contenu en fonction du menu sélectionné
-        function toggleMenu(menuId) {
-            var contents = document.querySelectorAll('.menu-content');
-            contents.forEach(function(content) {
-                content.style.display = 'none';
-            });
-            var selectedContent = document.getElementById(menuId + 'Content');
-            if (selectedContent) {
-                selectedContent.style.display = 'block';
-            }
-        }
-
-        // Attacher des événements de clic aux éléments de menu pour basculer le contenu
-        document.getElementById('menu1').addEventListener('click', function() {
-            toggleMenu('menu1');
-        });
-        document.getElementById('menu2').addEventListener('click', function() {
-            toggleMenu('menu2');
-        });
-    </script>
 </body>
 </html>
