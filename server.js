@@ -8,7 +8,7 @@ const flash = require('connect-flash');
 const app = express();
 
 // Configuration de MongoDB 
-mongoose.connect('mongodb://18.132.63.195:27017/madatabase');
+mongoose.connect('mongodb://18.132.63.195:27017/mydatabase');
 
 // Configuration d'Express
 app.set('view engine', 'ejs');
@@ -24,8 +24,6 @@ const User = mongoose.model('User', {
   username: String,
   email: String,
   password: String,
-  firstName: String, // Ajout du champ "nom"
-  lastName: String, // Ajout du champ "prénom"
 });
 
 // Configuration de Passport
@@ -71,21 +69,12 @@ app.get('/inscription', (req, res) => {
 
 app.post('/inscription', async (req, res) => {
   try {
-    const { username, email, password, passwordConfirmation, firstName, lastName } = req.body;
+    const { username, email, password, passwordConfirmation } = req.body;
 
     // Vérifier si les mots de passe correspondent
-    console.log('Nom d\'utilisateur:', username);
-    console.log('Email:', email);
-    console.log('Prénom:', firstName); // Vérifier si le prénom est reçu
-    console.log('Nom:', lastName); // Vérifier si le nom est reçu
-
-    // Reste de votre logique d'enregistrement
-  } catch (error) {
-    console.error('Erreur lors de l\'inscription:', error);
-    res.render('inscription', { message: 'Erreur lors de l\'inscription.' });
-  }
-});
-
+    if (password !== passwordConfirmation) {
+      return res.render('inscription', { message: 'Les mots de passe ne correspondent pas.' });
+    }
 
     // Hasher le mot de passe
     const hashedPassword = await bcrypt.hash(password, 10);
@@ -94,8 +83,6 @@ app.post('/inscription', async (req, res) => {
       username: username,
       email: email,
       password: hashedPassword,
-      firstName: firstName, // Sauvegarder le prénom dans la base de données
-      lastName: lastName, // Sauvegarder le nom dans la base de données
     });
 
     await user.save();
@@ -106,6 +93,7 @@ app.post('/inscription', async (req, res) => {
     res.render('inscription', { message: 'Erreur lors de l\'inscription.' });
   }
 });
+
 app.get('/connexion', (req, res) => {
   res.render('connexion');
 });
