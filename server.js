@@ -8,7 +8,7 @@ const flash = require('connect-flash');
 const app = express();
 
 // Configuration de MongoDB
-mongoose.connect('mongodb://localhost:27017/mydatabase');
+mongoose.connect('mongodb://18.132.63.195:27017/mydatabase');
 
 // Configuration d'Express
 app.set('view engine', 'ejs');
