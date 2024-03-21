@@ -7,7 +7,7 @@ const bcrypt = require('bcrypt');
 const flash = require('connect-flash');
 const app = express();
 
-// Configuration de MongoDB
+// Configuration de MongoDB 
 mongoose.connect('mongodb://18.132.63.195:27017/mydatabase');
 
 // Configuration d'Express
@@ -21,21 +21,17 @@ app.use(flash());
 
 // Définition du schéma utilisateur MongoDB
 const User = mongoose.model('User', {
-  nom: String,
-  prenom: String,
+  username: String,
   email: String,
   password: String,
 });
 
 // Configuration de Passport
-passport.use(new LocalStrategy(async (email, password, done) => {
+passport.use(new LocalStrategy(async (username, password, done) => {
   try {
-    const user = await User.findOne({ email: email }).exec();
-    if (!user) return done(null, false, { message: 'Adresse e-mail incorrecte.' });
-
-    const isPasswordValid = await bcrypt.compare(password, user.password);
-    if (!isPasswordValid) return done(null, false, { message: 'Mot de passe incorrect.' });
-
+    const user = await User.findOne({ username: username }).exec();
+    if (!user) return done(null, false, { message: 'Nom d\'utilisateur incorrect.' });
+    if (!bcrypt.compareSync(password, user.password)) return done(null, false, { message: 'Mot de passe incorrect.' });
     return done(null, user);
   } catch (err) {
     return done(err);
@@ -73,7 +69,7 @@ app.get('/inscription', (req, res) => {
 
 app.post('/inscription', async (req, res) => {
   try {
-    const { nom, prenom, email, password, passwordConfirmation } = req.body;
+    const { username, email, password, passwordConfirmation } = req.body;
 
     // Vérifier si les mots de passe correspondent
     if (password !== passwordConfirmation) {
@@ -84,8 +80,7 @@ app.post('/inscription', async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, 10);
 
     const user = new User({
-      nom: nom,
-      prenom: prenom,
+      username: username,
       email: email,
       password: hashedPassword,
     });
