@@ -20,11 +20,15 @@ app.use(passport.session());
 app.use(flash()); 
 
 // Définition du schéma utilisateur MongoDB
-const User = mongoose.model('User', {
+const UserSchema = mongoose.Schema({
   username: String,
   email: String,
   password: String,
+  firstName: String, // Champ prénom
+  lastName: String, // Champ nom
 });
+
+const User = mongoose.model('User', UserSchema);
 
 // Configuration de Passport
 passport.use(new LocalStrategy(async (username, password, done) => {
@@ -69,7 +73,7 @@ app.get('/inscription', (req, res) => {
 
 app.post('/inscription', async (req, res) => {
   try {
-    const { username, email, password, passwordConfirmation } = req.body;
+    const { username, email, password, passwordConfirmation, firstName, lastName } = req.body;
 
     // Vérifier si les mots de passe correspondent
     if (password !== passwordConfirmation) {
@@ -83,6 +87,8 @@ app.post('/inscription', async (req, res) => {
       username: username,
       email: email,
       password: hashedPassword,
+      firstName: firstName, // Enregistrer le prénom
+      lastName: lastName, // Enregistrer le nom
     });
 
     await user.save();
