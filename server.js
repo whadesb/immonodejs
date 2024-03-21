@@ -8,7 +8,7 @@ const flash = require('connect-flash');
 const app = express();
 
 // Configuration de MongoDB 
-mongoose.connect('mongodb://18.132.63.195:27017/immodatabase');
+mongoose.connect('mongodb://18.132.63.195:27017/madatabase');
 
 // Configuration d'Express
 app.set('view engine', 'ejs');
