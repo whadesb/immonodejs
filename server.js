@@ -71,7 +71,7 @@ app.get('/inscription', (req, res) => {
 
 app.post('/inscription', async (req, res) => {
   try {
-    const { username, email, password, passwordConfirmation } = req.body;
+    const { username, email, password, passwordConfirmation, firstName, lastName } = req.body;
 
     // Vérifier si les mots de passe correspondent
     if (password !== passwordConfirmation) {
@@ -85,6 +85,8 @@ app.post('/inscription', async (req, res) => {
       username: username,
       email: email,
       password: hashedPassword,
+      firstName: firstName, // Sauvegarder le prénom dans la base de données
+      lastName: lastName, // Sauvegarder le nom dans la base de données
     });
 
     await user.save();
@@ -95,7 +97,6 @@ app.post('/inscription', async (req, res) => {
     res.render('inscription', { message: 'Erreur lors de l\'inscription.' });
   }
 });
-
 app.get('/connexion', (req, res) => {
   res.render('connexion');
 });
