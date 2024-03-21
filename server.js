@@ -32,7 +32,10 @@ passport.use(new LocalStrategy(async (email, password, done) => {
   try {
     const user = await User.findOne({ email: email }).exec();
     if (!user) return done(null, false, { message: 'Adresse e-mail incorrecte.' });
-    if (!bcrypt.compareSync(password, user.password)) return done(null, false, { message: 'Mot de passe incorrect.' });
+
+    const isPasswordValid = await bcrypt.compare(password, user.password);
+    if (!isPasswordValid) return done(null, false, { message: 'Mot de passe incorrect.' });
+
     return done(null, user);
   } catch (err) {
     return done(err);
