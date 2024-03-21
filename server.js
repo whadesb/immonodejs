@@ -24,6 +24,8 @@ const User = mongoose.model('User', {
   username: String,
   email: String,
   password: String,
+  firstName: String, // Ajout du champ "nom"
+  lastName: String, // Ajout du champ "prénom"
 });
 
 // Configuration de Passport
