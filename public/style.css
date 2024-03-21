@@ -122,3 +122,61 @@ footer {
         width: 70%;
     }
 }
+
+/* Styles spécifiques à la page de tableau de bord */
+.dashboard {
+    display: flex;
+}
+
+.menu {
+    width: 25%;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.dashboard-h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.profile-info {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* Media queries pour les appareils mobiles */
+@media screen and (max-width: 768px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .menu {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 20px;
+    }
+}
+
