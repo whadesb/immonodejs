@@ -28,9 +28,9 @@ const User = mongoose.model('User', {
 });
 
 // Configuration de Passport
-passport.use(new LocalStrategy(async (username, password, done) => {
+passport.use(new LocalStrategy(async (email, password, done) => {
   try {
-    const user = await User.findOne({ email: username }).exec();
+    const user = await User.findOne({ email: email }).exec();
     if (!user) return done(null, false, { message: 'Adresse e-mail incorrecte.' });
     if (!bcrypt.compareSync(password, user.password)) return done(null, false, { message: 'Mot de passe incorrect.' });
     return done(null, user);
