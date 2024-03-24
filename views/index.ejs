@@ -1,43 +1,83 @@
-<header class="header">
-    <div class="container">
-        <div class="header-content">
-            <h1 class="logo">UAP Immo</h1>
-            <nav class="nav">
-                <a href="/connexion" class="button">Connexion</a>
-                <a href="/inscription" class="button">Inscription</a>
-            </nav>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Votre Site</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        /* Styles spécifiques à la page d'accueil */
+        /* Vous pouvez ajouter d'autres styles ici */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: transparent;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+        
+        .navbar-logo {
+            width: 120px; /* Ajustez la taille selon votre logo */
+            /* Ajoutez ici d'autres styles pour le logo si nécessaire */
+        }
+        
+        .navbar-buttons {
+            display: flex;
+            align-items: center;
+        }
+        
+        .navbar-buttons button {
+            margin-left: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        .btn-login {
+            background-color: #007bff; /* Couleur du bouton de connexion */
+            color: white;
+        }
+        
+        .btn-register {
+            background-color: transparent;
+            border: 1px solid #007bff; /* Bordure du bouton d'inscription */
+            color: #007bff;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-register:hover {
+            background-color: rgba(0, 123, 255, 0.1); /* Couleur de fond au survol */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-logo">
+            <!-- Insérez ici votre logo -->
+            <img src="chemin/vers/votre-logo.png" alt="Votre Logo">
+        </div>
+        <div class="navbar-buttons">
+            <button class="btn-register">Inscription</button>
+            <button class="btn-login">Connexion</button>
         </div>
     </div>
-</header>
-<main class="main">
-    <div class="container">
-        <section class="hero">
-            <h2 class="hero-title">Bienvenue sur UAP Immo</h2>
-            <p class="hero-description">Trouvez votre futur logement facilement avec notre application conviviale et boostez votre visibilité avec notre webmarketing intégré.</p>
-            <a href="#services" class="button">Découvrir nos services</a>
-        </section>
-        <section class="services" id="services">
-            <h2 class="section-title">Nos Services</h2>
-            <div class="service">
-                <img src="service1.png" alt="Service 1">
-                <h3>Recherche Immobilière</h3>
-                <p>Parcourez une large sélection de propriétés et trouvez votre maison idéale.</p>
-            </div>
-            <div class="service">
-                <img src="service2.png" alt="Service 2">
-                <h3>Marketing Digital</h3>
-                <p>Optimisez votre visibilité en ligne avec nos services de webmarketing.</p>
-            </div>
-            <div class="service">
-                <img src="service3.png" alt="Service 3">
-                <h3>Annonces Premium</h3>
-                <p>Boostez vos annonces avec nos options publicitaires premium.</p>
-            </div>
-        </section>
+
+    <!-- Contenu de la page d'accueil -->
+    <div class="content">
+        <h1>Bienvenue sur Votre Site</h1>
+        <!-- Ajoutez ici le contenu de votre page d'accueil -->
     </div>
-</main>
-<footer class="footer">
-    <div class="container">
-        <p>&copy; 2024 UAP Immo. Tous droits réservés.</p>
-    </div>
-</footer>
+
+    <!-- Scripts -->
+    <!-- Ajoutez ici vos scripts si nécessaire -->
+
+</body>
+</html>
