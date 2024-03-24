@@ -4,25 +4,158 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil - UAP Immo</title>
-    <link rel="stylesheet" href="/style.css">
+    <style>
+      /* Reset des styles par défaut */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Styles généraux */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+        color: #333;
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Barre supérieure transparente */
+      .top-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        background-color: transparent;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+      }
+
+      .top-bar .logo {
+        font-size: 1.5rem;
+        color: #fff;
+      }
+
+      .top-bar .auth-links {
+        color: #fff;
+      }
+
+      /* Menu */
+      .menu {
+        position: fixed;
+        top: 40px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        padding: 10px 0;
+      }
+
+      .menu .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+      }
+
+      .menu ul {
+        list-style: none;
+        display: flex;
+      }
+
+      .menu li {
+        margin-right: 20px;
+      }
+
+      .menu li a {
+        text-decoration: none;
+        color: #333;
+        transition: color 0.3s ease;
+      }
+
+      .menu li a:hover {
+        color: #ff7f50;
+      }
+
+      /* Section Présentation */
+      #presentation {
+        height: 100vh;
+        background-color: #ff7f50;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #presentation .container {
+        text-align: center;
+      }
+
+      #presentation h2 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+      }
+
+      #presentation p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+      }
+
+      #presentation .btn {
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        border-radius: 5px;
+        background-color: #fff;
+        color: #ff7f50;
+        text-decoration: none;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      #presentation .btn:hover {
+        background-color: #ff6347;
+        color: #fff;
+      }
+
+    </style>
 </head>
 <body>
 
-  <!-- Menu de navigation -->
-  <nav class="navbar">
+  <!-- Barre supérieure transparente -->
+  <div class="top-bar">
+    <div class="logo">UAP Immo</div>
+    <div class="auth-links">
+      <a href="/connexion">Connexion</a> |
+      <a href="/inscription">Inscription</a>
+    </div>
+  </div>
+
+  <!-- Menu -->
+  <div class="menu">
     <div class="container">
-      <div class="logo">UAP Immo</div>
-      <ul class="menu">
+      <ul>
         <li><a href="#presentation">Présentation</a></li>
         <li><a href="#temoignages">Témoignages</a></li>
         <li><a href="#annonces">Annonces</a></li>
-        <li><a href="/connexion">Connexion</a></li>
       </ul>
     </div>
-  </nav>
+  </div>
 
   <!-- Section Présentation -->
-  <section id="presentation" class="section">
+  <section id="presentation">
     <div class="container">
       <h2>Présentation</h2>
       <p>Bienvenue sur UAP Immo, votre plateforme spécialisée dans l'immobilier et le webmarketing. Découvrez nos services et trouvez la maison de vos rêves dès aujourd'hui!</p>
@@ -64,25 +197,5 @@
     </div>
   </section>
 
-  <script>
-    window.addEventListener('scroll', function() {
-      var navbar = document.querySelector('.navbar');
-      if (window.scrollY > 50) {
-        navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
-      } else {
-        navbar.style.backgroundColor = 'transparent';
-      }
-    });
-    
-    var btns = document.querySelectorAll('.btn');
-    btns.forEach(function(btn) {
-      btn.addEventListener('mouseover', function() {
-        this.style.backgroundColor = '#ff6347';
-      });
-      btn.addEventListener('mouseout', function() {
-        this.style.backgroundColor = '#ff7f50';
-      });
-    });
-  </script>
 </body>
 </html>
