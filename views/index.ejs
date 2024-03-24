@@ -33,7 +33,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        background-color: rgba(255, 255, 255, 0.9);
+        background-color: rgba(255, 255, 255, 0.5); /* Réglage de la transparence */
         z-index: 1000;
         padding: 10px 20px;
       }
@@ -57,12 +57,11 @@
       /* Menu */
       .menu {
         position: absolute;
-        top: 40px;
+        top: calc(40px + 20px); /* Ajout de 20px de marge pour correspondre à la top-bar */
         left: 0;
         width: 100%;
         background-color: #fff;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
+        border-radius: 20px; /* Arrondir tous les bords */
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         z-index: 1000;
         padding: 10px 0;
