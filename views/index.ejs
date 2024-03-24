@@ -65,23 +65,27 @@
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         z-index: 1000;
         padding: 20px; /* Ajout de padding */
-        margin: 0 auto; /* Centrer le menu horizontalement */
+        margin: 0 40px; /* Ajout de marges gauche et droite */
       }
 
       .menu .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin: 0 auto;
       }
 
       .menu ul {
         list-style: none;
         display: flex;
-        margin-left: 20px; /* Ajout de marge à gauche */
       }
 
       .menu li {
         margin-right: 20px;
+      }
+
+      .menu li:first-child {
+        margin-left: 0; /* Supprimer la marge gauche du premier élément */
       }
 
       .menu li a {
