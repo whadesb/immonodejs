@@ -3,42 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil - Votre Site</title>
+    <title>Accueil - UAP Immo</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <div class="navbar">
-        <div class="navbar-logo">
-            <!-- Insérez ici votre logo -->
-            <img src="chemin/vers/votre-logo.png" alt="Votre Logo">
-        </div>
-        <div class="navbar-buttons">
-            <a href="#inscription-section" class="btn-register">Inscription</a>
-            <a href="/connexion" class="btn-login">Connexion</a>
-        </div>
+
+  <!-- Menu de navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">UAP Immo</div>
+      <ul class="menu">
+        <li><a href="#presentation">Présentation</a></li>
+        <li><a href="#temoignages">Témoignages</a></li>
+        <li><a href="#annonces">Annonces</a></li>
+        <li><a href="/connexion">Connexion</a></li>
+      </ul>
     </div>
+  </nav>
 
-    <!-- Contenu de la page d'accueil -->
-    <div class="content">
-        <h1>Bienvenue sur Votre Site</h1>
-        <!-- Ajoutez ici le contenu de votre page d'accueil -->
-
-        <!-- Section d'inscription -->
-        <section id="inscription-section" class="inscription-section">
-            <h2>Inscrivez-vous dès maintenant</h2>
-            <form action="/inscription" method="POST">
-                <input type="text" name="username" placeholder="Nom d'utilisateur" required>
-                <input type="email" name="email" placeholder="Adresse e-mail" required>
-                <input type="password" name="password" placeholder="Mot de passe" required>
-                <input type="password" name="passwordConfirmation" placeholder="Confirmez le mot de passe" required>
-                <button type="submit">S'inscrire</button>
-            </form>
-        </section>
+  <!-- Section Présentation -->
+  <section id="presentation" class="section">
+    <div class="container">
+      <h2>Présentation</h2>
+      <p>Bienvenue sur UAP Immo, votre plateforme spécialisée dans l'immobilier et le webmarketing. Découvrez nos services et trouvez la maison de vos rêves dès aujourd'hui!</p>
+      <a href="#inscription" class="btn">Inscription</a>
     </div>
+  </section>
 
-    <!-- Scripts -->
-    <!-- Ajoutez ici vos scripts si nécessaire -->
+  <!-- Section Témoignages -->
+  <section id="temoignages" class="section">
+    <div class="container">
+      <h2>Témoignages</h2>
+      <div class="testimonial">
+        <p>"UAP Immo a rendu la recherche de ma maison beaucoup plus facile. Je recommande vivement leurs services!"</p>
+        <span>- Jean Dupont</span>
+      </div>
+      <div class="testimonial">
+        <p>"Grâce à UAP Immo, j'ai pu trouver un appartement dans ma ville préférée en un rien de temps. Merci pour votre excellent service!"</p>
+        <span>- Marie Martin</span>
+      </div>
+    </div>
+  </section>
 
+  <!-- Section Annonces -->
+  <section id="annonces" class="section">
+    <div class="container">
+      <h2>Annonces</h2>
+      <div class="listing">
+        <!-- Insérez ici vos annonces immobilières dynamiquement -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Inscription -->
+  <section id="inscription" class="section">
+    <div class="container">
+      <h2>Inscription</h2>
+      <p>Rejoignez notre plateforme dès maintenant et bénéficiez de tous nos avantages exclusifs!</p>
+      <a href="/inscription" class="btn">Inscrivez-vous</a>
+    </div>
+  </section>
+
+  <script src="/script.js"></script>
 </body>
 </html>
