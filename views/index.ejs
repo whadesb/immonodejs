@@ -35,12 +35,13 @@
         width: 100%;
         z-index: 1000;
         padding: 10px 0;
+        background-color: rgba(255, 255, 255, 0.8); /* Ajout de transparence */
       }
 
       .top-bar .container {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: center; /* Alignement vertical */
         margin: 0 auto;
         padding: 0 20px;
       }
@@ -58,26 +59,19 @@
       .menu {
         position: absolute;
         top: calc(40px + 20px); /* Ajout de 20px de marge pour correspondre à la top-bar */
-        left: 0;
-        right: 0;
+        left: 20px; /* Marge à gauche */
+        right: 20px; /* Marge à droite */
         background-color: #fff;
         border-radius: 20px; /* Arrondir tous les bords */
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         z-index: 1000;
         padding: 20px; /* Ajout de padding */
-        margin: 0 20px; /* Ajout de marges gauche et droite */
-      }
-
-      .menu .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 auto;
       }
 
       .menu ul {
         list-style: none;
         display: flex;
+        justify-content: center;
       }
 
       .menu li {
@@ -197,10 +191,4 @@
   <section id="inscription" class="section">
     <div class="container">
       <h2>Inscription</h2>
-      <p>Rejoignez notre plateforme dès maintenant et bénéficiez de tous nos avantages exclusifs!</p>
-      <a href="/inscription" class="btn">Inscrivez-vous</a>
-    </div>
-  </section>
-
-</body>
-</html>
+      <p>Rejoignez notre
