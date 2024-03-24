@@ -64,6 +64,25 @@
     </div>
   </section>
 
-  <script src="/script.js"></script>
+  <script>
+    window.addEventListener('scroll', function() {
+      var navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
+      } else {
+        navbar.style.backgroundColor = 'transparent';
+      }
+    });
+    
+    var btns = document.querySelectorAll('.btn');
+    btns.forEach(function(btn) {
+      btn.addEventListener('mouseover', function() {
+        this.style.backgroundColor = '#ff6347';
+      });
+      btn.addEventListener('mouseout', function() {
+        this.style.backgroundColor = '#ff7f50';
+      });
+    });
+  </script>
 </body>
 </html>
