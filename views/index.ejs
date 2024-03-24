@@ -98,44 +98,60 @@
         color: #ff7f50;
       }
 
-      /* Section Présentation */
-      #presentation {
-        height: 100vh;
+      /* Section Colonne */
+      .column {
+        width: 300px;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin: 40px 0;
+        text-align: left;
+        transition: background-color 0.3s ease;
+      }
+
+      .column:hover {
         background-color: #ff7f50;
-        color: #fff;
-        display: flex;
-        justify-content: flex-start; /* Alignement à gauche */
-        align-items: center;
-        padding-left: 40px; /* Ajout de marge à gauche */
       }
 
-      #presentation .container {
-        text-align: center;
+      .column h3 {
+        color: #333;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
       }
 
-      #presentation h2 {
-        font-size: 3rem;
+      .column p {
+        color: #555;
+        font-size: 1.2rem;
         margin-bottom: 20px;
       }
 
-      #presentation p {
-        font-size: 1.2rem;
-        margin-bottom: 30px;
+      .column .words {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 20px;
       }
 
-      #presentation .btn {
-        padding: 15px 30px;
+      .column .words div {
+        width: 48%; /* Pour créer deux colonnes */
+      }
+
+      .column .btn {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
         font-size: 1.2rem;
+        text-align: center;
         border-radius: 5px;
-        background-color: #fff;
-        color: #ff7f50;
+        background-color: #ff7f50;
+        color: #fff;
         text-decoration: none;
-        transition: background-color 0.3s ease, color 0.3s ease;
+        transition: background-color 0.3s ease;
       }
 
-      #presentation .btn:hover {
+      .column .btn:hover {
         background-color: #ff6347;
-        color: #fff;
       }
 
     </style>
@@ -162,44 +178,4 @@
         <li><a href="#annonces">Annonces</a></li>
       </ul>
     </div>
-  </div>
-
-  <!-- Section Présentation -->
-  <section id="presentation">
-    <div class="container">
-      <h2>Présentation</h2>
-      <p>Bienvenue sur UAP Immo, votre plateforme spécialisée dans l'immobilier et le webmarketing. Découvrez nos services et trouvez la maison de vos rêves dès aujourd'hui!</p>
-      <a href="#inscription" class="btn">Inscription</a>
-    </div>
-  </section>
-
-  <!-- Section Témoignages -->
-  <section id="temoignages" class="section">
-    <div class="container">
-      <h2>Témoignages</h2>
-      <div class="testimonial">
-        <p>"UAP Immo a rendu la recherche de ma maison beaucoup plus facile. Je recommande vivement leurs services!"</p>
-        <span>- Jean Dupont</span>
-      </div>
-      <div class="testimonial">
-        <p>"Grâce à UAP Immo, j'ai pu trouver un appartement dans ma ville préférée en un rien de temps. Merci pour votre excellent service!"</p>
-        <span>- Marie Martin</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section Annonces -->
-  <section id="annonces" class="section">
-    <div class="container">
-      <h2>Annonces</h2>
-      <div class="listing">
-        <!-- Insérez ici vos annonces immobilières dynamiquement -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Section Inscription -->
-  <section id="inscription" class="section">
-    <div class="container">
-      <h2>Inscription</h2>
-      <p>Rejo
+  </
