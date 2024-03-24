@@ -100,58 +100,55 @@
 
       /* Section Colonne */
       .column {
-        width: 300px;
-        background-color: #fff;
-        border-radius: 20px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        margin: 40px 0;
+        background-color: #ff7f50;
+        color: #fff;
+        padding: 40px;
+        border-radius: 10px;
+        margin-top: 20px;
         text-align: left;
-        transition: background-color 0.3s ease;
       }
 
       .column:hover {
-        background-color: #ff7f50;
+        background-color: #ff6347; /* Changement de couleur au survol */
       }
 
       .column h3 {
-        color: #333;
-        font-size: 1.5rem;
-        margin-bottom: 10px;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #fff;
       }
 
       .column p {
-        color: #555;
         font-size: 1.2rem;
         margin-bottom: 20px;
+        line-height: 1.6;
       }
 
-      .column .words {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+      .column ul {
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+        list-style: none;
         margin-bottom: 20px;
       }
 
-      .column .words div {
-        width: 48%; /* Pour créer deux colonnes */
+      .column ul li {
+        margin-bottom: 10px;
       }
 
       .column .btn {
-        display: block;
-        width: 100%;
-        padding: 10px 0;
-        font-size: 1.2rem;
-        text-align: center;
-        border-radius: 5px;
-        background-color: #ff7f50;
-        color: #fff;
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #fff;
+        color: #ff7f50;
         text-decoration: none;
-        transition: background-color 0.3s ease;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
       }
 
       .column .btn:hover {
         background-color: #ff6347;
+        color: #fff;
       }
 
     </style>
@@ -178,4 +175,8 @@
         <li><a href="#annonces">Annonces</a></li>
       </ul>
     </div>
-  </
+  </div>
+
+  <!-- Section Colonne -->
+  <section class="column">
+    <h3
