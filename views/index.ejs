@@ -35,7 +35,6 @@
         width: 100%;
         z-index: 1000;
         padding: 10px 0;
-        margin: 0 20px; /* Ajout de marges gauche et droite */
       }
 
       .top-bar .container {
@@ -59,13 +58,13 @@
       .menu {
         position: absolute;
         top: calc(40px + 20px); /* Ajout de 20px de marge pour correspondre à la top-bar */
-        left: calc(100px + 40px); /* Ajustement à partir du logo avec marges gauche et droite */
+        left: calc(100px + 20px); /* Ajustement à partir du logo */
         background-color: #fff;
         border-radius: 20px; /* Arrondir tous les bords */
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         z-index: 1000;
-        padding: 10px 0;
-        width: calc(100% - 80px); /* Ajustement de la largeur avec marges gauche et droite */
+        padding: 10px 20px; /* Ajout de padding */
+        margin: 0 20px; /* Ajout de marges gauche et droite */
       }
 
       .menu .container {
@@ -73,7 +72,6 @@
         justify-content: space-between;
         align-items: center;
         margin: 0 auto;
-        padding: 0 20px;
       }
 
       .menu ul {
