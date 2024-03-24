@@ -1,90 +1,138 @@
+/* Reset des styles par défaut */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Styles généraux */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  line-height: 1.6;
 }
 
-/* Styles spécifiques à la barre de navigation */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Menu de navigation */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: transparent;
-    padding: 15px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
 }
 
-.navbar-logo img {
-    width: 120px; /* Ajustez la taille selon votre logo */
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
 }
 
-.navbar-buttons {
-    display: flex;
-    align-items: center;
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-.navbar-buttons a {
-    margin-left: 10px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    text-decoration: none;
-    cursor: pointer;
+.menu {
+  list-style: none;
+  display: flex;
 }
 
-.btn-login {
-    background-color: #007bff; /* Couleur du bouton de connexion */
-    color: white;
+.menu li {
+  margin-right: 20px;
 }
 
-.btn-register {
-    background-color: transparent;
-    border: 1px solid #007bff; /* Bordure du bouton d'inscription */
-    color: #007bff;
-    transition: background-color 0.3s;
+.menu li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
 }
 
-.btn-register:hover {
-    background-color: rgba(0, 123, 255, 0.1); /* Couleur de fond au survol */
+.menu li a:hover {
+  color: #ff7f50;
 }
 
-/* Styles de la section d'inscription */
-.inscription-section {
-    padding: 20px;
-    background-color: #f9f9f9;
-    margin-top: 50px; /* Ajustez selon votre design */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* Sections */
+.section {
+  padding: 80px 0;
+  text-align: center;
 }
 
-.inscription-section h2 {
-    margin-bottom: 20px;
+.section h2 {
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: #333;
 }
 
-.inscription-section input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.section p {
+  margin-bottom: 20px;
 }
 
-.inscription-section button {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+/* Bouton */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff7f50;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-.inscription-section button:hover {
-    background-color: #0056b3;
+.btn:hover {
+  background-color: #ff6347;
+}
+
+/* Témoignages */
+.testimonial {
+  margin-bottom: 30px;
+}
+
+.testimonial p {
+  font-style: italic;
+}
+
+.testimonial span {
+  font-weight: bold;
+}
+
+/* Formulaire d'inscription */
+#inscription form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#inscription form input[type="text"],
+#inscription form input[type="email"],
+#inscription form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#inscription form input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #ff7f50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#inscription form input[type="submit"]:hover {
+  background-color: #ff6347;
 }
