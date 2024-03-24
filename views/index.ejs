@@ -34,7 +34,7 @@
         left: 0;
         width: 100%;
         z-index: 1000;
-        padding: 10px 0;
+        padding: 20px 0;
       }
 
       .top-bar .container {
@@ -47,26 +47,39 @@
 
       .top-bar .logo {
         font-size: 1.5rem;
-        color: #333;
+        color: #000000;
       }
 
-      .top-bar .auth-links {
-        color: #333;
+      .top-bar .auth-links .a {
+        color: #000000;
+        
       }
+      .top-bar .auth-links .auth-link {
+  color: #000000; /* Couleur différente pour les liens "Inscription" et "Connexion" */
+  text-decoration: none; /* Suppression du soulignement */
+  transition: color 0.3s ease; /* Animation de transition de couleur au survol */
+}
 
-      /* Menu */
-      .menu {
-        position: absolute;
-        top: calc(40px + 20px); /* Ajout de 20px de marge pour correspondre à la top-bar */
-        left: 0;
-        right: 0;
-        background-color: #fff;
-        border-radius: 20px; /* Arrondir tous les bords */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-        padding: 20px; /* Ajout de padding */
-        margin: 0 40px; /* Ajout de marges gauche et droite */
-      }
+.top-bar .auth-links .auth-link:hover {
+  color: #1f1f1f; /* Couleur au survol */
+}
+
+
+
+.menu {
+  position: absolute;
+  top: calc(40px + 20px); /* Ajout de 20px de marge pour correspondre à la top-bar */
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border-radius: 100px; /* Arrondir tous les bords */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 30px 20px; /* Ajout de padding */
+  margin: 20px auto; /* Ajout de marges pour centrer horizontalement */
+  max-width: 1200px; /* Limite la largeur du menu à 1200px */
+}
+
 
       .menu .container {
         display: flex;
@@ -98,46 +111,63 @@
         color: #ff7f50;
       }
 
-      /* Section Présentation */
       #presentation {
-        height: 100vh;
-        background-color: #ff7f50;
-        color: #fff;
-        display: flex;
-        justify-content: flex-start; /* Alignement à gauche */
-        align-items: center;
-        padding-left: 40px; /* Ajout de marge à gauche */
-      }
+  height: 100vh;
+  background-color: #80b6ce;
+  color: #fff;
+  display: flex;
+  justify-content: flex-start; /* Alignement à gauche */
+  align-items: center; /* Centrage vertical */
+  position: relative; /* Position relative pour positionner le contenu à l'intérieur */
+  padding-left: 0; /* Supprimer la marge à gauche */
+}
 
-      #presentation .container {
-        text-align: center;
-      }
+#presentation .container {
+  display: block;
+  flex-direction: column;
+  margin-top: calc(40px + 20px); /* Top ajusté pour correspondre à la hauteur du menu */
+  padding: 30px;
+  text-align: left;
+  position: absolute;
+  left: calc(260px + 20px); /* Ajouter la largeur du logo et l'espace entre le logo et le menu */
+  width: calc(33.33% - 40px);
+  border-radius: 10px; /* Bords arrondis */
+  background-color: rgba(255, 255, 255, 0.9); /* Couleur de fond avec transparence */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
 
-      #presentation h2 {
-        font-size: 3rem;
-        margin-bottom: 20px;
-      }
 
-      #presentation p {
-        font-size: 1.2rem;
-        margin-bottom: 30px;
-      }
+#presentation h2 {
+  font-size: 1.9rem;
+  color: #1f1f1f;
+  margin-bottom: 20px;
+}
 
-      #presentation .btn {
-        padding: 15px 30px;
-        font-size: 1.2rem;
-        border-radius: 5px;
-        background-color: #fff;
-        color: #ff7f50;
-        text-decoration: none;
-        transition: background-color 0.3s ease, color 0.3s ease;
-      }
+#presentation p {
+    color: #1f1f1f;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
 
-      #presentation .btn:hover {
-        background-color: #ff6347;
-        color: #fff;
-      }
+#presentation .btn {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  background-color: #ff7f50;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
+#presentation .btn:hover {
+  background-color: #ff6347;
+  #presentation .no-account {
+  font-size: 0.9rem; /* Réduire la taille de la police */
+  text-align: center; /* Centrer le texte */
+  margin-top: 10px; /* Ajouter un espacement entre le bouton et le texte */
+}
+
+}
     </style>
 </head>
 <body>
@@ -147,9 +177,9 @@
     <div class="container">
       <div class="logo">UAP Immo</div>
       <div class="auth-links">
-        <a href="/connexion">Connexion</a> |
-        <a href="/inscription">Inscription</a>
-      </div>
+        <a href="/connexion" class="auth-link">Connexion</a> |
+        <a href="/inscription" class="auth-link">Inscription</a>
+      </div>      
     </div>
   </div>
 
@@ -158,8 +188,9 @@
     <div class="container">
       <ul>
         <li><a href="#presentation">Présentation</a></li>
-        <li><a href="#temoignages">Témoignages</a></li>
+        <li><a href="#temoignages">Landing Page</a></li>
         <li><a href="#annonces">Annonces</a></li>
+        <li><a href="#annonces">Publicités</a></li>
       </ul>
     </div>
   </div>
@@ -168,8 +199,9 @@
   <section id="presentation">
     <div class="container">
       <h2>Présentation</h2>
-      <p>Bienvenue sur UAP Immo, votre plateforme spécialisée dans l'immobilier et le webmarketing. Découvrez nos services et trouvez la maison de vos rêves dès aujourd'hui!</p>
-      <a href="#inscription" class="btn">Inscription</a>
+            <p>Bienvenue sur UAP Immo, votre plateforme spécialisée dans l'immobilier et le webmarketing. Découvrez nos services et trouvez la maison de vos rêves dès aujourd'hui!</p>
+    Vous n'avez pas de conctas </p>
+      <a href="#on" class="btn">Inscription</a>
     </div>
   </section>
 
