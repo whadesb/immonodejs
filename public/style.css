@@ -1,94 +1,90 @@
-/* Reset CSS */
-* {
+/* Styles généraux */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-/* Global Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
-}
-
-.header {
-    background-color: #343a40;
-    color: #fff;
-    padding: 1rem 0;
-}
-
-.container {
+/* Styles spécifiques à la barre de navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 1000;
 }
 
-.header-content {
+.navbar-logo img {
+    width: 120px; /* Ajustez la taille selon votre logo */
+}
+
+.navbar-buttons {
     display: flex;
     align-items: center;
 }
 
-.logo {
-    font-size: 2rem;
-    margin-right: auto;
-}
-
-.nav {
-    display: flex;
-}
-
-.nav a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 1rem;
-}
-
-.button {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
+.navbar-buttons a {
+    margin-left: 10px;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-.button:hover {
-    background-color: #0056b3;
+.btn-login {
+    background-color: #007bff; /* Couleur du bouton de connexion */
+    color: white;
 }
 
-
-.section-title {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2rem;
+.btn-register {
+    background-color: transparent;
+    border: 1px solid #007bff; /* Bordure du bouton d'inscription */
+    color: #007bff;
+    transition: background-color 0.3s;
 }
 
-.services {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+.btn-register:hover {
+    background-color: rgba(0, 123, 255, 0.1); /* Couleur de fond au survol */
 }
 
-.service {
-    flex: 0 1 calc(33.33% - 1rem);
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 5px;
-    margin-bottom: 2rem;
+/* Styles de la section d'inscription */
+.inscription-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin-top: 50px; /* Ajustez selon votre design */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.service img {
+.inscription-section h2 {
+    margin-bottom: 20px;
+}
+
+.inscription-section input {
     width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 1rem;
 }
 
-.service h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+.inscription-section button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.service p {
-    font-size: 1rem;
+.inscription-section button:hover {
+    background-color: #0056b3;
 }
