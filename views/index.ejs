@@ -28,19 +28,21 @@
       }
 
       /* Barre supérieure transparente */
-
-
-
+      .top-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        padding: 10px 0;
+      }
 
       .top-bar .container {
-        position: absolute;
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin: 0 auto;
         padding: 0 20px;
-        z-index: 1000;
-        padding: 10px 0;
       }
 
       .top-bar .logo {
@@ -56,26 +58,19 @@
       .menu {
         position: absolute;
         top: calc(40px + 20px); /* Ajout de 20px de marge pour correspondre à la top-bar */
-        left: 0;
-        right: 0;
+        left: 50%; /* Centrer horizontalement */
+        transform: translateX(-50%); /* Décalage de 50% de la largeur du menu vers la gauche */
         background-color: #fff;
         border-radius: 20px; /* Arrondir tous les bords */
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         z-index: 1000;
         padding: 20px; /* Ajout de padding */
-        margin: 0 auto; /* Centrer le menu horizontalement */
-      }
-
-      .menu .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
       }
 
       .menu ul {
         list-style: none;
         display: flex;
-        margin-left: 20px; /* Ajout de marge à gauche */
+        margin-left: -20px; /* Annuler la marge gauche du conteneur */
       }
 
       .menu li {
