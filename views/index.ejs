@@ -33,7 +33,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        background-color: transparent;
+        background-color: rgba(255, 255, 255, 0.9);
         z-index: 1000;
         padding: 10px 20px;
       }
@@ -57,7 +57,7 @@
       /* Menu */
       .menu {
         position: absolute;
-        top: 40px;
+        top: calc(40px + 20px); /* Ajout de 20px de marge pour correspondre à la top-bar */
         left: 0;
         width: 100%;
         background-color: #fff;
@@ -162,46 +162,4 @@
 
   <!-- Section Présentation -->
   <section id="presentation">
-    <div class="container">
-      <h2>Présentation</h2>
-      <p>Bienvenue sur UAP Immo, votre plateforme spécialisée dans l'immobilier et le webmarketing. Découvrez nos services et trouvez la maison de vos rêves dès aujourd'hui!</p>
-      <a href="#inscription" class="btn">Inscription</a>
-    </div>
-  </section>
-
-  <!-- Section Témoignages -->
-  <section id="temoignages" class="section">
-    <div class="container">
-      <h2>Témoignages</h2>
-      <div class="testimonial">
-        <p>"UAP Immo a rendu la recherche de ma maison beaucoup plus facile. Je recommande vivement leurs services!"</p>
-        <span>- Jean Dupont</span>
-      </div>
-      <div class="testimonial">
-        <p>"Grâce à UAP Immo, j'ai pu trouver un appartement dans ma ville préférée en un rien de temps. Merci pour votre excellent service!"</p>
-        <span>- Marie Martin</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section Annonces -->
-  <section id="annonces" class="section">
-    <div class="container">
-      <h2>Annonces</h2>
-      <div class="listing">
-        <!-- Insérez ici vos annonces immobilières dynamiquement -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Section Inscription -->
-  <section id="inscription" class="section">
-    <div class="container">
-      <h2>Inscription</h2>
-      <p>Rejoignez notre plateforme dès maintenant et bénéficiez de tous nos avantages exclusifs!</p>
-      <a href="/inscription" class="btn">Inscrivez-vous</a>
-    </div>
-  </section>
-
-</body>
-</html>
+    <div
