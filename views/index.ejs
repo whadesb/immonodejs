@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>UAP Immo | Accueil</title>
- </head>
+</head>
 <body>
   <div class="top-bar">
     <div class="container">
@@ -28,17 +28,39 @@
     </div>
   </div>
   <div class="content-wrapper">
-  <section id="presentation">
-    <div class="container">
-        <h2>UAP Immo</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse beatae enim nobis, cupiditate quaerat est vitae officiis natus quas ullam delectus quidem magni ratione architecto aspernatur, aperiam quisquam eveniet soluta?</p>
-        <a href="#inscription" class="btn">Connexion</a>
-        <p class="no-account">New user? <span class="create-account">Create an account</span></p>
-    </div>
-    </section>
-</div>
-    <div class="footer">
-        <p>Copyright © 2024 — UAP Immo. All Rights Reserved</p>
+    <section id="presentation">
+      <div class="container">
+          <h2>UAP Immo</h2>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse beatae enim nobis, cupiditate quaerat est vitae officiis natus quas ullam delectus quidem magni ratione architecto aspernatur, aperiam quisquam eveniet soluta?</p>
+          <a href="#inscription" class="btn">Connexion</a>
+          <p class="no-account">New user? <span class="create-account">Create an account</span></p>
       </div>
-  </body>
-  </html>
+    </section>
+  </div>
+  <div class="footer">
+    <p>Copyright © 2024 — UAP Immo. All Rights Reserved</p>
+  </div>
+  <!-- Formulaire de connexion -->
+  <header class="top-bar">
+    <div class="container">
+      <h1 class="logo">UAP Immo</h1>
+    </div>
+  </header>
+  <main>
+    <section id="connexion" class="form-container">
+      <h2>Connexion</h2>
+      <form action="/connexion" method="post" class="auth-form">
+        <label for="username">Nom d'utilisateur:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Mot de passe:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit" class="button">Se connecter</button>
+      </form>
+      <p>Pas encore de compte? <a href="/inscription" class="link">Inscrivez-vous ici</a>.</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 UAP Immo. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>
