@@ -127,6 +127,17 @@
         padding-left: 0; /* Supprimer la marge à gauche */
       }
 
+      #form-container {
+        height: 100vh;
+        background-color: #80b6ce;
+        color: #fff;
+        display: flex;
+        justify-content: flex-start; /* Alignement à gauche */
+        align-items: center; /* Centrage vertical */
+        position: relative; /* Position relative pour positionner le contenu à l'intérieur */
+        padding-left: 0; /* Supprimer la marge à gauche */
+      }
+
 #form-container .container {
 display: block;
         flex-direction: column;
