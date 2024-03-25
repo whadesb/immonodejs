@@ -10,6 +10,7 @@ body {
   display: flex;
   justify-content: center; /* Centrer horizontalement */
   align-items: center; /* Centrer verticalement */
+  height: 100vh; /* Assure que le corps prend tout l'espace vertical */
 }
 
 /* Barre supérieure transparente */
