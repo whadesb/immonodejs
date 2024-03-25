@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-Mh5b82+mrkP7jU/HxUm3NXhzJWJ4rEJb5F9L/Bqvc1Uz1vaF3vPWx0hje1ZbYRf4Znw4/73OJZj+KrNhiM1rwg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>UAP Immo | Accueil</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Barre supérieure transparente -->
   <div class="top-bar">
     <div class="container">
       <div class="logo">UAP Immo</div>
@@ -31,17 +29,49 @@
     </div>
   </div>
   <div class="content-wrapper">
-    <section id="presentation">
-      <div class="container">
+  <section id="presentation">
+    <div class="container">
         <h2>UAP Immo</h2>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse beatae enim nobis, cupiditate quaerat est vitae officiis natus quas ullam delectus quidem magni ratione architecto aspernatur, aperiam quisquam eveniet soluta?</p>
         <a href="#inscription" class="btn">Connexion</a>
         <p class="no-account">New user? <span class="create-account">Create an account</span></p>
-      </div>
+    </div>
     </section>
-  </div>
-  <div class="footer">
-    <p>Copyright © 2024 — UAP Immo. All Rights Reserved</p>
-  </div>
+</div>
+    <div class="footer">
+        <p>Copyright © 2024 — UAP Immo. All Rights Reserved</p>
+      </div>
+  </body>
+  </html>
+
+connexion :
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - UAP Immo</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <h1 class="logo">UAP Immo</h1>
+    </header>
+    <main>
+        <section class="form-container">
+            <h2>Connexion</h2>
+            <form action="/connexion" method="post" class="auth-form">
+                <label for="username">Nom d'utilisateur:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Mot de passe:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit" class="button">Se connecter</button>
+            </form>
+            <p>Pas encore de compte? <a href="/inscription" class="link">Inscrivez-vous ici</a>.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 UAP Immo. Tous droits réservés.</p>
+    </footer>
 </body>
 </html>
