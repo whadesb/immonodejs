@@ -118,6 +118,7 @@
 #style-form {
      height: 100vh;
         color: #fff;
+background-color: #80b6ce;
         display: flex;
         justify-content: flex-start; /* Alignement à gauche */
         align-items: center; /* Centrage vertical */
@@ -139,7 +140,7 @@
         display: block;
         flex-direction: column;
         margin-top: calc(40px + 20px); /* Top ajusté pour correspondre à la hauteur du menu */
-        padding: 30px 40px 5px 30px;
+        padding: 30px 40px 40px 30px;
         text-align: left;
         position: absolute;
         left: calc(260px + 20px); /* Ajouter la largeur du logo et l'espace entre le logo et le menu */
