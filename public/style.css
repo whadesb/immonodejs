@@ -120,7 +120,7 @@
         color: #fff;
 background-color: #80b6ce;
         display: flex;
-        justify-content: flex-start; /* Alignement à gauche */
+        justify-content:center; /* Alignement à gauche */
         align-items: center; /* Centrage vertical */
         position: relative; /* Position relative pour positionner le contenu à l'intérieur */
         padding-left: 0; /* Supprimer la marge à gauche */
@@ -144,7 +144,8 @@ background-color: #80b6ce;
         text-align: left;
         position: absolute;
         left: calc(260px + 20px); /* Ajouter la largeur du logo et l'espace entre le logo et le menu */
-        width: 450px;
+          width: 100%;
+  max-width: 1200px;
         font-size: 16px;
         line-height: 1.3;
         border-radius:42px; /* Bords arrondis */
