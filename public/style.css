@@ -203,3 +203,67 @@
   text-align: center;
   z-index: 999;
 }
+
+
+      /* Formulaire de connexion */
+      .form-container {
+        width: 100%;
+        max-width: 400px;
+        margin: 100px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .form-container h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .auth-form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .auth-form label {
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      .auth-form input {
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+
+      .auth-form button {
+        padding: 10px;
+        background-color: #2c9795;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .auth-form button:hover {
+        background-color: #1f7c77;
+      }
+
+      .auth-form p {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      .auth-form .link {
+        color: #2c9795;
+        text-decoration: underline;
+        transition: color 0.3s ease;
+      }
+
+      .auth-form .link:hover {
+        color: #1f7c77;
+      }
