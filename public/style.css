@@ -135,7 +135,7 @@
         padding-left: 0; /* Supprimer la marge à gauche */
       }
 
-      #form-container {
+      #style-form {
         height: 100vh;
         background-color: #80b6ce;
         color: #fff;
@@ -146,60 +146,11 @@
         padding-left: 0; /* Supprimer la marge à gauche */
       }
 
-#style-form {
-display: block;
-        flex-direction: column;
-        margin-top: calc(40px + 20px); /* Top ajusté pour correspondre à la hauteur du menu */
-        padding: 30px 40px 5px 30px;
-        text-align: left;
-        position: absolute;
-        left: calc(260px + 20px); /* Ajouter la largeur du logo et l'espace entre le logo et le menu */
-        width: 450px;
-        font-size: 16px;
-        line-height: 1.3;
-        border-radius:42px; /* Bords arrondis */
-        background-color: rgba(255, 255, 255, 0.9); /* Couleur de fond avec transparence */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-}
-#form-connexion .container {
-      display: block;
-        flex-direction: column;
-        margin-top: calc(40px + 20px); /* Top ajusté pour correspondre à la hauteur du menu */
-        padding: 30px 40px 5px 30px;
-        text-align: left;
-        position: absolute;
-        left: calc(260px + 20px); /* Ajouter la largeur du logo et l'espace entre le logo et le menu */
-        width: 450px;
-        font-size: 16px;
-        line-height: 1.3;
-        border-radius:42px; /* Bords arrondis */
-        background-color: rgba(255, 255, 255, 0.9); /* Couleur de fond avec transparence */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
-}
-#form-connexion h2 {
-        color: #1f1f1f;
-        text-align: justify;
-        font-size: 1.0rem;
-        margin-bottom: 40px;
-}
-
-#form-connexion h2 {
-             font-size: 1.5rem;
-        color: #3b3b3b;
-        margin-bottom: 20px;
-}
 
 
-#form-connexion .btn {
-        padding: 15px 15px; /* Réduire le padding pour rendre le bouton moins large */
-        font-size: 1.1rem;
-        border-radius: 100px 10px;
-        background-color: #ff7f50;
-        color: #fff;
-        text-decoration: none;
-        transition: background-color 0.3s ease, color 0.3s ease;
-        margin-bottom: 40px;
-}
+
+
+
 
       #presentation .container {
         display: block;
