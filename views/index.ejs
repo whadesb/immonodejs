@@ -3,235 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil - UAP Immo</title>
-    <style>
-      /* Reset des styles par défaut */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      /* Styles généraux */
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f8f8f8;
-        color: #333;
-        line-height: 1.6;
-        margin: 0;
-      }
-
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-
-      /* Barre supérieure transparente */
-      .top-bar {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-        padding: 20px 0;
-      }
-
-      .top-bar .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-
-      .top-bar .logo {
-        font-size: 1.5rem;
-        color: #000000;
-      }
-
-      .top-bar .auth-links .a {
-        color: #000000;
-        
-      }
-      .top-bar .auth-links .auth-link {
-  color: #000000; /* Couleur différente pour les liens "Inscription" et "Connexion" */
-  text-decoration: none; /* Suppression du soulignement */
-  transition: color 0.3s ease; /* Animation de transition de couleur au survol */
-}
-
-.top-bar .auth-links .auth-link:hover {
-  color: #1f1f1f; /* Couleur au survol */
-}
-
-
-
-.menu {
-  position: absolute;
-  top: calc(40px + 20px); /* Ajout de 20px de marge pour correspondre à la top-bar */
-  left: 0;
-  right: 0;
-  background-color: #fff;
-  border-radius: 100px; /* Arrondir tous les bords */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-  padding: 30px 20px; /* Ajout de padding */
-  margin: 20px auto; /* Ajout de marges pour centrer horizontalement */
-  max-width: 1200px; /* Limite la largeur du menu à 1200px */
-}
-
-
-      .menu .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 auto;
-      }
-
-      .menu ul {
-        list-style: none;
-        display: flex;
-      }
-
-      .menu li {
-        margin-right: 20px;
-      }
-
-      .menu li:first-child {
-        margin-left: 0; /* Supprimer la marge gauche du premier élément */
-      }
-
-      .menu li a {
-        text-decoration: none;
-        color: #333;
-        transition: color 0.3s ease;
-      }
-
-      .menu li a:hover {
-        color: #ff7f50;
-      }
-
-      #presentation {
-  height: 100vh;
-  background-color: #80b6ce;
-  color: #fff;
-  display: flex;
-  justify-content: flex-start; /* Alignement à gauche */
-  align-items: center; /* Centrage vertical */
-  position: relative; /* Position relative pour positionner le contenu à l'intérieur */
-  padding-left: 0; /* Supprimer la marge à gauche */
-}
-
-#presentation .container {
-  display: block;
-  flex-direction: column;
-  margin-top: calc(40px + 20px); /* Top ajusté pour correspondre à la hauteur du menu */
-  padding: 30px;
-  text-align: left;
-  position: absolute;
-  left: calc(260px + 20px); /* Ajouter la largeur du logo et l'espace entre le logo et le menu */
-  width: calc(33.33% - 40px);
-  border-radius: 10px; /* Bords arrondis */
-  background-color: rgba(255, 255, 255, 0.9); /* Couleur de fond avec transparence */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
-}
-
-
-#presentation h2 {
-  font-size: 1.9rem;
-  color: #1f1f1f;
-  margin-bottom: 20px;
-}
-
-#presentation p {
-    color: #1f1f1f;
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-}
-
-#presentation .btn {
-  padding: 15px 30px;
-  font-size: 1.2rem;
-  border-radius: 5px;
-  background-color: #ff7f50;
-  color: #fff;
-  text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-#presentation .btn:hover {
-  background-color: #ff6347;
-  #presentation .no-account {
-  font-size: 0.9rem; /* Réduire la taille de la police */
-  text-align: center; /* Centrer le texte */
-  margin-top: 10px; /* Ajouter un espacement entre le bouton et le texte */
-}
-
-}
-    </style>
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-Mh5b82+mrkP7jU/HxUm3NXhzJWJ4rEJb5F9L/Bqvc1Uz1vaF3vPWx0hje1ZbYRf4Znw4/73OJZj+KrNhiM1rwg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>UAP Immo | Accueil</title>
+ </head>
 <body>
-
-  <!-- Barre supérieure transparente -->
   <div class="top-bar">
     <div class="container">
       <div class="logo">UAP Immo</div>
       <div class="auth-links">
-        <a href="/connexion" class="auth-link">Connexion</a> |
+        <a href="/connexion" class="auth-link">Contact</a> |
         <a href="/inscription" class="auth-link">Inscription</a>
+        <a href="/connexion" class="btn-2"><i class="fas fa-user"></i> Connexion</a>
       </div>      
     </div>
   </div>
-
-  <!-- Menu -->
   <div class="menu">
     <div class="container">
       <ul>
-        <li><a href="#presentation">Présentation</a></li>
+        <li><a href="#presentation">HOME</a></li>
         <li><a href="#temoignages">Landing Page</a></li>
-        <li><a href="#annonces">Annonces</a></li>
-        <li><a href="#annonces">Publicités</a></li>
+        <li><a href="#annonces">Publicite</a></li>
+        <li><a href="#annonces">Lorem</a></li>
       </ul>
     </div>
   </div>
-
-  <!-- Section Présentation -->
+  <div class="content-wrapper">
   <section id="presentation">
     <div class="container">
-      <h2>Présentation</h2>
-            <p>Bienvenue sur UAP Immo, votre plateforme spécialisée dans l'immobilier et le webmarketing. Découvrez nos services et trouvez la maison de vos rêves dès aujourd'hui!</p>
-    Vous n'avez pas de conctas </p>
-      <a href="#on" class="btn">Inscription</a>
+        <h2>UAP Immo</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse beatae enim nobis, cupiditate quaerat est vitae officiis natus quas ullam delectus quidem magni ratione architecto aspernatur, aperiam quisquam eveniet soluta?</p>
+        <a href="#inscription" class="btn">Connexion</a>
+        <p class="no-account">New user? <span class="create-account">Create an account</span></p>
     </div>
-  </section>
-
-  <!-- Section Témoignages -->
-  <section id="temoignages" class="section">
-    <div class="container">
-      <h2>Témoignages</h2>
-      <div class="testimonial">
-        <p>"UAP Immo a rendu la recherche de ma maison beaucoup plus facile. Je recommande vivement leurs services!"</p>
-        <span>- Jean Dupont</span>
+    </section>
+</div>
+    <div class="footer">
+        <p>Copyright © 2024 — UAP Immo. All Rights Reserved</p>
       </div>
-      <div class="testimonial">
-        <p>"Grâce à UAP Immo, j'ai pu trouver un appartement dans ma ville préférée en un rien de temps. Merci pour votre excellent service!"</p>
-        <span>- Marie Martin</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section Annonces -->
-  <section id="annonces" class="section">
-    <div class="container">
-      <h2>Annonces</h2>
-      <div class="listing">
-        <!-- Insérez ici vos annonces immobilières dynamiquement -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Section Inscription -->
-  <section id="inscription" class="section">
-    <div class="container">
-      <h2>Inscription</h2>
-      <p>Rejo
+  </body>
+  </html>
