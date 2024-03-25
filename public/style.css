@@ -117,7 +117,6 @@
       }
 #style-form {
      height: 100vh;
-        background-color: #888888;
         color: #fff;
         display: flex;
         justify-content: flex-start; /* Alignement à gauche */
@@ -147,7 +146,7 @@
         padding-left: 0; /* Supprimer la marge à gauche */
       }
 
-#form-container .container {
+#style-form {
 display: block;
         flex-direction: column;
         margin-top: calc(40px + 20px); /* Top ajusté pour correspondre à la hauteur du menu */
