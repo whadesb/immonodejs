@@ -1,4 +1,8 @@
-/* Ajoutez ces styles à votre fichier style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 /* Styles généraux */
 body {
@@ -7,10 +11,12 @@ body {
   color: #333;
   line-height: 1.6;
   margin: 0;
-  display: flex;
-  justify-content: center; /* Centrer horizontalement */
-  align-items: center; /* Centrer verticalement */
-  height: 100vh; /* Assure que le corps prend tout l'espace vertical */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* Barre supérieure transparente */
@@ -39,22 +45,22 @@ body {
 }
 
 .top-bar .auth-links .a {
-  color: #000000;
+  color: #000000;        
 }
 
 .top-bar .auth-links .auth-link {
-  color: #000000;
-  text-decoration: none;
-  transition: color 0.3s ease;
+  color: #000000; /* Couleur différente pour les liens "Inscription" et "Connexion" */
+  text-decoration: none; /* Suppression du soulignement */
+  transition: color 0.3s ease; /* Animation de transition de couleur au survol */
 }
 
 .top-bar .auth-links .auth-link:hover {
   color: #1f1f1f;
-  text-decoration: overline;
+  text-decoration: overline; 
 }
 
 .top-bar .btn-2 {
-  padding: 10px 20px;
+  padding: 10px 20px; /* Réduire le padding pour rendre le bouton moins large */
   font-size: 1.1rem;
   border-radius: 65px;
   margin-left: 30px;
@@ -67,16 +73,16 @@ body {
 
 .menu {
   position: absolute;
-  top: calc(40px + 20px);
+  top: calc(40px + 20px); /* Ajout de 20px de marge pour correspondre à la top-bar */
   left: 0;
   right: 0;
   background-color: #fff;
-  border-radius: 100px;
+  border-radius: 100px; /* Arrondir tous les bords */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  padding: 30px 20px;
-  margin: 20px auto;
-  max-width: 1200px;
+  padding: 30px 20px; /* Ajout de padding */
+  margin: 20px auto; /* Ajout de marges pour centrer horizontalement */
+  max-width: 1200px; /* Limite la largeur du menu à 1200px */
 }
 
 .menu .container {
@@ -96,7 +102,7 @@ body {
 }
 
 .menu li:first-child {
-  margin-left: 0;
+  margin-left: 0; /* Supprimer la marge gauche du premier élément */
 }
 
 .menu li a {
@@ -110,74 +116,18 @@ body {
   color: #ff7f50;
 }
 
-/* Formulaire */
-.form-container {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 42px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 30px 40px;
-  width: 450px;
-  text-align: left;
-}
-
-.form-container h2 {
-  font-size: 1.5rem;
-  color: #3b3b3b;
-  margin-bottom: 20px;
-}
-
-.form-container label {
-  display: block;
-  margin-bottom: 10px;
-}
-
-.form-container input[type="text"],
-.form-container input[type="password"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-
-.form-container button {
-  padding: 15px 30px;
-  font-size: 1.1rem;
-  border-radius: 100px 10px;
-  background-color: #ff7f50;
+#presentation {
+  height: 100vh;
+  background-color: #80b6ce;
   color: #fff;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  justify-content: flex-start; /* Alignement à gauche */
+  align-items: center; /* Centrage vertical */
+  position: relative; /* Position relative pour positionner le contenu à l'intérieur */
+  padding-left: 0; /* Supprimer la marge à gauche */
 }
 
-.form-container button:hover {
-  background-color: #ff6347;
-}
-
-.form-container p {
-  font-size: 0.8rem;
-}
-
-.form-container .link {
-  color: #ff6347;
-  text-decoration: none;
-}
-
-.form-container .link:hover {
-  text-decoration: underline;
-}
-
-.footer {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 1200px;
-  border-top: 0.05rem solid rgb(59, 59, 59);
-  color: #3f3e3e;
-  padding: 20px;
-  text-align: center;
-  z-index: 999;
-}
+#presentation .container {
+  display: block;
+  flex-direction: column;
+  margin-top: calc(40px + 20px); /* Top ajusté pour correspondre à la hauteur
