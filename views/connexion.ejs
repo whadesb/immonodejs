@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>UAP Immo | Accueil</title>
- </head>
+    <title>Connexion - UAP Immo</title>
+</head>
 <body>
   <div class="top-bar">
     <div class="container">
@@ -28,22 +28,24 @@
     </div>
   </div>
   <div class="content-wrapper">
-<div class="container">
-     <section class="form-container">
-            <h2>Connexion</h2>
-            <form action="/connexion" method="post" class="auth-form">
-                <label for="username">Nom d'utilisateur:</label>
-                <input type="text" id="username" name="username" required>
-                <label for="password">Mot de passe:</label>
-                <input type="password" id="password" name="password" required>
-                <button type="submit" class="button">Se connecter</button>
-            </form>
-            <p>Pas encore de compte? <a href="/inscription" class="link">Inscrivez-vous ici</a>.</p>
+    <section id="presentation">
+      <div class="container">
+        <section class="form-container">
+          <h2>Connexion</h2>
+          <form action="/connexion" method="post" class="auth-form">
+            <label for="username">Nom d'utilisateur:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Mot de passe:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit" class="button">Se connecter</button>
+          </form>
+          <p>Pas encore de compte? <a href="/inscription" class="link">Inscrivez-vous ici</a>.</p>
         </section>
-</div>
+      </div>
+    </section>
   </div>
   <div class="footer">
-      <p>&copy; 2024 UAP Immo. Tous droits réservés.</p>
+    <p>&copy; 2024 UAP Immo. Tous droits réservés.</p>
   </div>
 </body>
 </html>
