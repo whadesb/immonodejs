@@ -4,7 +4,6 @@
         box-sizing: border-box;
       }
 
-      /* Styles généraux */
       body {
         font-family: sans-serif;
         background-color: #f8f8f8;
@@ -19,7 +18,7 @@
         padding: 0 20px;
       }
 
-      /* Barre supérieure transparente */
+
       .top-bar {
         position: absolute;
         top: 0;
@@ -49,9 +48,9 @@
       }
 
       .top-bar .auth-links .auth-link {
-        color: #000000; /* Couleur différente pour les liens "Inscription" et "Connexion" */
-        text-decoration: none; /* Suppression du soulignement */
-        transition: color 0.3s ease; /* Animation de transition de couleur au survol */
+        color: #000000; 
+        text-decoration: none;
+        transition: color 0.3s ease;
       }
 
       .top-bar .auth-links .auth-link:hover {
@@ -59,7 +58,7 @@
         text-decoration: overline; 
       }
       .top-bar .btn-2 {
-        padding: 10px 20px; /* Réduire le padding pour rendre le bouton moins large */
+        padding: 10px 20px; 
         font-size: 1.1rem;
         border-radius: 65px;
         margin-left: 30px;
@@ -73,16 +72,16 @@
 
       .menu {
         position: absolute;
-        top: calc(40px + 20px); /* Ajout de 20px de marge pour correspondre à la top-bar */
+        top: calc(40px + 20px); 
         left: 0;
         right: 0;
         background-color: #fff;
-        border-radius: 100px; /* Arrondir tous les bords */
+        border-radius: 100px; 
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         z-index: 1000;
-        padding: 30px 20px; /* Ajout de padding */
-        margin: 20px auto; /* Ajout de marges pour centrer horizontalement */
-        max-width: 1200px; /* Limite la largeur du menu à 1200px */
+        padding: 30px 20px;
+        margin: 20px auto; 
+        max-width: 1200px; 
       }
 
       .menu .container {
@@ -102,7 +101,7 @@
       }
 
       .menu li:first-child {
-        margin-left: 0; /* Supprimer la marge gauche du premier élément */
+        margin-left: 0; 
       }
 
       .menu li a {
@@ -120,58 +119,52 @@
         color: #fff;
 background-color: #80b6ce;
         display: flex;
-        justify-content:center; /* Alignement à gauche */
-        align-items: center; /* Centrage vertical */
-        position: relative; /* Position relative pour positionner le contenu à l'intérieur */
-        padding-left: 0; /* Supprimer la marge à gauche */
+        justify-content:center;
+        align-items: center; 
+        position: relative; 
+        padding-left: 0; 
 }
       #presentation {
         height: 100vh;
         background-color: #80b6ce;
         color: #fff;
         display: flex;
-        justify-content: flex-start; /* Alignement à gauche */
-        align-items: center; /* Centrage vertical */
-        position: relative; /* Position relative pour positionner le contenu à l'intérieur */
-        padding-left: 0; /* Supprimer la marge à gauche */
+        justify-content: flex-start; 
+        align-items: center; 
+        position: relative; 
+        padding-left: 0; 
       }
 
       #style-form .container-form {
         display: block;
         flex-direction: column;
-        margin-top: calc(40px + 20px); /* Top ajusté pour correspondre à la hauteur du menu */
+        margin-top: calc(40px + 20px); 
         padding: 30px 40px 40px 30px;
         text-align: left;
         position: absolute;
-        left: calc(260px + 20px); /* Ajouter la largeur du logo et l'espace entre le logo et le menu */
+        left: calc(260px + 20px); 
           width: 100%;
   max-width: 1200px;
         font-size: 16px;
         line-height: 1.3;
-        border-radius:42px; /* Bords arrondis */
-       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+        border-radius:42px; 
+       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
       }
-
-
-
-
-
-
 
       #presentation .container {
         display: block;
         flex-direction: column;
-        margin-top: calc(40px + 20px); /* Top ajusté pour correspondre à la hauteur du menu */
+        margin-top: calc(40px + 20px); 
         padding: 30px 40px 5px 30px;
         text-align: left;
         position: absolute;
-        left: calc(260px + 20px); /* Ajouter la largeur du logo et l'espace entre le logo et le menu */
+        left: calc(260px + 20px); 
         width: 450px;
         font-size: 16px;
         line-height: 1.3;
-        border-radius:42px; /* Bords arrondis */
-        background-color: rgba(255, 255, 255, 0.9); /* Couleur de fond avec transparence */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ombre légère */
+        border-radius:42px; 
+        background-color: rgba(255, 255, 255, 0.9); 
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
 
       #presentation h2 {
@@ -188,7 +181,7 @@ background-color: #80b6ce;
       }
 
       #presentation .btn {
-        padding: 15px 15px; /* Réduire le padding pour rendre le bouton moins large */
+        padding: 15px 15px; 
         font-size: 1.1rem;
         border-radius: 100px 10px;
         background-color: #ff7f50;
@@ -228,7 +221,7 @@ background-color: #80b6ce;
   transform: translateX(-50%);
   width: 100%;
   max-width: 1200px;
-  border-top: 0.05rem solid rgb(59, 59, 59); /* Réduction de l'épaisseur de la bordure */
+  border-top: 0.05rem solid rgb(59, 59, 59); 
   color: #3f3e3e;
   padding: 20px;
   text-align: center;
