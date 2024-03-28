@@ -1,207 +1,206 @@
+/* public/style.css */
+
+/* Styles généraux pour le body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Styles pour l'en-tête */
+header {
+    background-color: #f8f8f8f8;
+    color: rgb(0, 0, 0);
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid gray;
+}
+
+/* Styles pour le logo */
 .logo {
-  width: 150px; /* Taille souhaitée pour le logo */
-  height: auto; /* Pour conserver les proportions de l'image */
-}
-.top-bar {
-  padding: 30px 40px; /* Augmenter la hauteur de la top bar */
+    font-weight: 400;
+    letter-spacing: .02em;
+    font-size: 1rem;
 }
 
-.top-bar a {
-  color: #000000;
-  font-size: 18px; /* couleur du texte */
+/* Styles pour la navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.top-bar .btn {
-  margin-left: 10px;
-  border-radius: 40px;
-  padding: 10px 35px; 
-  color: white;
-  background-color: #272e8f;/* espace entre le lien et le bouton */
+nav ul {
+    list-style-type: none;
+    display: flex;
 }
 
-.top-bar .btn:hover {
-  margin-left: 10px;
-  border-radius: 50px;
-  padding: 10px 25px; 
-  color: white;
-  background-color: #535ce3;/* espace entre le lien et le bouton */
-}
-.top-bar .separator {
-  margin: 0 5px; /* espace autour de la barre verticale */
-  border-right: 1px solid #000000; /* barre verticale */
+nav ul li {
+    margin-right: 20px;
+    color: white;
 }
 
-/* Navigation Bar */
-.navbar {
-  border-radius: 50px 50px;
-  height: 80px;
+/* Styles pour les liens */
+a {
+    color: rgb(27, 27, 27);
+    text-decoration: none;
 }
 
-.custom-navbar {
-  background-color: #ffffff; /* Couleur de fond personnalisée */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+a:hover {
+    color: rgb(1, 21, 21);
 }
 
-.navbar-brand {
-  font-size: 24px; 
-  color: #000000! important;
-  margin-left: 20px! important;
+/* Styles pour les boutons */
+.button {
+    background-color: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
-.navbar-nav .nav-link {
-  color: #000000! important;
-  margin-right: 20px;
-  font-size: 18px; /* Couleur des liens */
+.button:hover {
+    background-color: #555;
 }
 
-.fullscreen-section {
-  height: calc(100vh - 105px); /* Plein écran moins la hauteur de la top bar et la hauteur de la barre de navigation */
-  background-color: rgb(211, 235, 255);
+/* Styles pour le contenu */
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Presentation Section */
-.presentation-section {
-  padding: 50px; /* Espacement autour de la section */
-  height: calc(100% - 130px); /* Hauteur de la section plein écran moins la hauteur de la top bar et la hauteur de la barre de navigation */
+/* Styles pour le formulaire */
+.form-container {
+    max-width: 400px;
+    width: 100%;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.presentation-section .container {
-  height: 100%;
-
-
+label {
+    display: block;
+    margin-bottom: 0.5rem;
 }
 
-/* Presentation Section */
-.presentation-section .row {
-  height: 100%;
-  display: flex;
-  justify-content: flex-start; /* Aligner à gauche */
-  align-items: center; /* Centrer verticalement */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.presentation-section .col-md-6 {
-margin-left: 30px; 
-padding: 35px 30px;
-max-width: 240%;
-border: 1px solid #1b1b1b;
-border-radius: 45px;/* Petite marge gauche */
+#link-form {
+    color: rgb(0, 0, 0);
 }
 
-.presentation-section h2 {
-  margin-bottom: 20px; /* Espacement en bas du titre */
+#link-form:hover {
+    color: rgb(58, 57, 57);
 }
 
-.presentation-section p {
-  margin-bottom: 20px; 
-  text-align: justify;
+.password-field {
+    position: relative;
 }
 
-.presentation-section .text-center {
-  margin-bottom: 0px; 
-  text-align: justify;
+#togglePassword {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #333;
 }
 
-.presentation-section .btn {
-  border-radius: 40px; 
-background-color: #3664c7;
-}
-
-/* Styles spécifiques à la page de connexion */
-
-.form-login .row {
-  height: 100%;
-  display: flex;
-  justify-content: center; /* Aligner au centre horizontalement */
-  align-items: center; /* Aligner au centre verticalement */
-}
-
-.form-login {
-  padding: 50px 0;
-  min-height: calc(100vh - 105px); /* Ajuster en fonction de la hauteur de la barre de navigation */
-}
-
-.form-login .col-md-6 {
-  max-width: 400px; /* Ajustez la largeur selon vos besoins */
-  padding: 20px 30px;
-  border-radius: 30px;
-  border: 1px solid grey;
-  background-color: aliceblue;
-}
-
-.form-login h2 {
-  margin-bottom: 20px;
-}
-
-.form-login form {
-  max-width: 300px; /* Ajustez la largeur selon vos besoins */
-  margin: 0 auto; /* Centrer le formulaire horizontalement */
-}
-
-.form-login .form-group {
-  text-align: center; /* Centrer le contenu des champs de formulaire */
-}
-
-.form-login p {
-  margin-top: 20px;
-}
-
-/* Format mobile */
-@media (max-width: 767px) {
-  .form-login .col-md-6 {
-      max-width: 100%; /* Pour une largeur maximale sur les appareils mobiles */
-  }
+/* Styles pour le pied de page */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 20px;
 }
 
 
-.form-register .row {
-  height: 100%;
-  display: flex;
-  justify-content: center; /* Aligner au centre horizontalement */
-  align-items: center; /* Aligner au centre verticalement */
+/* public/style.css */
+
+/* Votre style existant pour le corps, l'en-tête, la navigation, etc. */
+
+/* public/style.css */
+
+/* Votre style existant pour le corps, l'en-tête, la navigation, etc. */
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
 }
 
-.form-register {
-  padding: 50px 0;
-  min-height: calc(100vh - 105px); /* Ajuster en fonction de la hauteur de la barre de navigation */
+.card {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 20px);
+    /* Pour que les cartes s'affichent deux par deux, avec un espacement entre elles */
 }
 
-.form-register .col-md-6 {
-  max-width: 400px; /* Ajustez la largeur selon vos besoins */
-  padding: 20px 30px;
-  border-radius: 30px;
-  border: 1px solid grey;
-  background-color: aliceblue;
+.card h3 {
+    margin-top: 0;
 }
 
-.form-register h2 {
-  margin-bottom: 20px;
+.card ul {
+    padding-left: 20px;
 }
 
-.form-register form {
-  max-width: 300px; /* Ajustez la largeur selon vos besoins */
-  margin: 0 auto; /* Centrer le formulaire horizontalement */
+.card p {
+    margin: 0;
 }
 
-.form-register .form-group {
-  text-align: center; /* Centrer le contenu des champs de formulaire */
+.card a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007bff;
 }
 
-.form-register p {
-  margin-top: 20px;
+.card a:hover {
+    text-decoration: underline;
 }
 
-
-/* Format mobile */
-@media (max-width: 767px) {
-.navbar {
-  max-width: 760px;
-border-radius: 5px;
-}
-.form-login .col-md-6 {
-  max-width: 100%; /* Pour une largeur maximale sur les appareils mobiles */
-}
-.form-register .col-md-6 {
-  max-width: 100%; /* Pour une largeur maximale sur les appareils mobiles */
+.card a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007bff;
 }
 
+.card a:hover {
+    text-decoration: underline;
 }
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
