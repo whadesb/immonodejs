@@ -63,17 +63,17 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
-app.get('/inscription', (req, res) => {
-  res.render('inscription');
+app.get('/register', (req, res) => {
+  res.render('register');
 });
 
-app.post('/inscription', async (req, res) => {
+app.post('/register', async (req, res) => {
   try {
     const { username, email, password, passwordConfirmation } = req.body;
 
     // Vérifier si les mots de passe correspondent
     if (password !== passwordConfirmation) {
-      return res.render('inscription', { message: 'Les mots de passe ne correspondent pas.' });
+      return res.render('register', { message: 'Les mots de passe ne correspondent pas.' });
     }
 
     // Hasher le mot de passe
@@ -88,24 +88,24 @@ app.post('/inscription', async (req, res) => {
     await user.save();
     
     // Rediriger vers ma page de connexion
-    res.redirect('/connexion');
+    res.redirect('/login');
   } catch (error) {
-    res.render('inscription', { message: 'Erreur lors de l\'inscription.' });
+    res.render('register', { message: 'Erreur lors de l\'inscription.' });
   }
 });
 
-app.get('/connexion', (req, res) => {
-  res.render('connexion');
+app.get('/login', (req, res) => {
+  res.render('login');
 });
 
-app.post('/connexion', passport.authenticate('local', {
+app.post('/login', passport.authenticate('local', {
   successRedirect: '/dashboard',
-  failureRedirect: '/connexion',
+  failureRedirect: '/login',
   failureFlash: true,
 }));
 
 app.get('/dashboard', (req, res) => {
-  if (!req.isAuthenticated()) return res.redirect('/connexion');
+  if (!req.isAuthenticated()) return res.redirect('/login');
   res.render('dashboard');
 });
 
@@ -115,7 +115,7 @@ app.get('/deconnexion', (req, res) => {
       // Gérer mon erreur  si nécessaire
       console.error(err);
     }
-    res.redirect('/connexion'); // Rediriger vers ma page de connexion après la déconnexion
+    res.redirect('/login'); // Rediriger vers ma page de connexion après la déconnexion
   });
 });
 
