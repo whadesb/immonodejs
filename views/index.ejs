@@ -1,70 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UAP Immo | Home</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Accueil</title>
 </head>
-<body>  
-  <section class="fullscreen-section">
+<body>
+    <header>
+        <nav>
+            <div class="logo">UAP Immo</div>
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/inscription">Inscription</a></li>
+                <% if (user) { %>
+                    <!-- Si l'utilisateur est connecté -->
+                    <li><a href="/deconnexion">Déconnexion</a></li>
+                <% } else { %>
+                    <!-- Si l'utilisateur n'est pas connecté -->
+                    <li><a href="/connexion" class="button">Connexion</a></li>
+                <% } %>
+            </ul>
+        </nav>
+    </header>
     <div class="container">
-      <div class="top-bar bg-transparent">
-        <div class="row align-items-center">
-          <div class="col-md-8">
-<a href="#"><img src="/uapimmologo.png" alt="UAP Immo Logo" class="logo"></a>
-</div>
-          <div class="col-md-4 text-right">
-            <a href="#">Infos</a>
-            <span class="separator"></span>
-            <a href="#">Contact</a>
-            <a href="#" class="btn btn-primary">Profil</a>
-          </div>
-        </div>
-      </div> 
-    </div>  
-    <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
-        <a class="navbar-brand" href="#">Lorem</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Lien 1</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Lien 2</a>
-            </li>
-          </ul>
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Lien 3</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Lien 4</a>
-            </li>
-          </ul>
-        </div>
-      </nav>    
-      <section class="presentation-section">
-        <div class="container">
-          <div class="row justify-content-start align-items-center">
-            <div class="col-md-6">
-              <div class="product-description text-center">
-                <h2>Lorem</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero eget fermentum.</p>
-              </div>
-              <a href="#" class="btn btn-primary d-block mx-auto">Connexion</a>
-              <p class="text-center">Vous n'avez pas de compte ? <a href="#">Inscrivez-vous</a> dès maintenant !</p>
-            </div>
-          </div>
-        </div>
-      </section
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+            <h2>Accueil</h2>
+            
+    </div>
+
+    <footer>
+        <p>&copy; 2024 UAP Immo. Tous droits réservés.</p>
+    </footer>
 </body>
 </html>
