@@ -3,7 +3,7 @@ function generateLandingPage() {
 
     // Envoi du contenu de la page au serveur avec les images
     const xhr = new XMLHttpRequest();
-    const url = './savePage.php';
+    const url = '/php/savePage.php';
 
     xhr.open('POST', url, true);
     xhr.onreadystatechange = function () {
