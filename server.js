@@ -11,9 +11,13 @@ const app = express();
 mongoose.connect('mongodb://18.132.63.195:27017/mydatabase');
 
 // Configuration d'Express
-app.use(express.static('images'));
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
+
+// Définir le dossier statique pour servir les images
+app.use(express.static('images'));
+
+// Autres configurations
 app.use(express.static('public'));
 app.use(session({ secret: 'votreSecret', resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
