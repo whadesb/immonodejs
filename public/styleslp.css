@@ -1,0 +1,68 @@
+/* styles_lp.css */
+
+/* Styles généraux */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.property-info {
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #555;
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+/* Disposition des images */
+#imageContainer {
+    display: flex;
+    flex-direction: column; /* Affichez les images en colonne sur les écrans plus petits */
+    align-items: center; /* Alignez les images au centre */
+}
+
+#imageContainer img {
+    width: 100%; /* Occupe 100% de la largeur de son conteneur */
+    height: auto; /* Ajuste automatiquement la hauteur en conservant les proportions */
+    margin-bottom: 10px; /* Ajoutez une marge entre les images */
+}
+
+/* Image de fond */
+body {
+    background-image: url("images/<?php echo $_FILES['backgroundImage']['name']; ?>");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+/* Media Queries pour le Responsive Design */
+@media only screen and (max-width: 600px) {
+    #imageContainer img {
+        width: 100%; /* Occupe 100% de la largeur sur les écrans plus petits */
+    }
+}
