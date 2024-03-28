@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Template</title>
+    <link rel="stylesheet" href="styles_lp.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="propertyTitle">
+            <?php echo $_POST['propertyType']; ?> à <?php echo $_POST['city']; ?>, <?php echo $_POST['country']; ?>
+        </h1>
+        <div class="property-info">
+            <p id="propertyDetails">
+                Surface: <?php echo $_POST['area']; ?> m²<br>
+                Prix: <?php echo $_POST['price']; ?> euros<br>
+                Pièces: <?php echo $_POST['rooms']; ?><br>
+                Salle(s) de bain: <?php echo $_POST['bathrooms']; ?>
+            </p>
+        </div>
+        <div id="imageContainer">
+            <?php
+            // Boucle à travers les fichiers image téléchargés
+            for ($i = 1; $i <= 2; $i++) {
+                $imageKey = 'image' . $i;
+                if (isset($_FILES[$imageKey]) && $_FILES[$imageKey]['error'] == 0) {
+                    $imageName = $_FILES[$imageKey]['name'];
+                    echo '<img src="./images/' . $imageName . '" alt="Image ' . $i . '">';
+                }
+            }
+            ?>
+        </div>
+    </div>
+</body>
+</html>
