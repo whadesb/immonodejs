@@ -7,22 +7,20 @@ const bcrypt = require('bcrypt');
 const flash = require('connect-flash');
 const app = express();
 
-// Configuration de MongoDB 
-mongoose.connect('mongodb://18.132.63.195:27017/mydatabase');
+// Configuration de MongoDB
+mongoose.connect('mongodb://localhost:27017/immo', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 // Configuration d'Express
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
-
-// Définir le dossier statique pour servir les images
-app.use(express.static('images'));
-
-// Autres configurations
 app.use(express.static('public'));
 app.use(session({ secret: 'votreSecret', resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(flash()); 
+app.use(flash()); // Ajout du support pour flash messages
 
 // Définition du schéma utilisateur MongoDB
 const User = mongoose.model('User', {
@@ -57,7 +55,7 @@ passport.deserializeUser((id, done) => {
     });
 });
 
-// Middleware pour passer ma variable user à toutes les vues
+// Middleware pour passer la variable user à toutes les vues
 app.use((req, res, next) => {
   res.locals.user = req.user;
   next();
@@ -68,17 +66,17 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
-app.get('/register', (req, res) => {
-  res.render('register');
+app.get('/inscription', (req, res) => {
+  res.render('inscription');
 });
 
-app.post('/register', async (req, res) => {
+app.post('/inscription', async (req, res) => {
   try {
     const { username, email, password, passwordConfirmation } = req.body;
 
     // Vérifier si les mots de passe correspondent
     if (password !== passwordConfirmation) {
-      return res.render('register', { message: 'Les mots de passe ne correspondent pas.' });
+      return res.render('inscription', { message: 'Les mots de passe ne correspondent pas.' });
     }
 
     // Hasher le mot de passe
@@ -92,35 +90,35 @@ app.post('/register', async (req, res) => {
 
     await user.save();
     
-    // Rediriger vers ma page de connexion
-    res.redirect('/login');
+    // Rediriger vers la page de connexion
+    res.redirect('/connexion');
   } catch (error) {
-    res.render('register', { message: 'Erreur lors de l\'inscription.' });
+    res.render('inscription', { message: 'Erreur lors de l\'inscription.' });
   }
 });
 
-app.get('/login', (req, res) => {
-  res.render('login');
+app.get('/connexion', (req, res) => {
+  res.render('connexion');
 });
 
-app.post('/login', passport.authenticate('local', {
+app.post('/connexion', passport.authenticate('local', {
   successRedirect: '/dashboard',
-  failureRedirect: '/login',
+  failureRedirect: '/connexion',
   failureFlash: true,
 }));
 
 app.get('/dashboard', (req, res) => {
-  if (!req.isAuthenticated()) return res.redirect('/login');
+  if (!req.isAuthenticated()) return res.redirect('/connexion');
   res.render('dashboard');
 });
 
 app.get('/deconnexion', (req, res) => {
   req.logout(function(err) {
     if (err) {
-      // Gérer mon erreur  si nécessaire
+      // Gérer l'erreur ici si nécessaire
       console.error(err);
     }
-    res.redirect('/login'); // Rediriger vers ma page de connexion après la déconnexion
+    res.redirect('/connexion'); // Rediriger vers la page de connexion après la déconnexion
   });
 });
 
