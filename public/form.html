@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Formulaire Immobilier</title>
+</head>
+<body>
+    <div class="container">
+        <form id="immobilierForm">
+            <label for="propertyType">Choix maison ou appartement:</label>
+            <select id="propertyType" name="propertyType" required>
+                <option value="Maison">Maison</option>
+                <option value="Appartement">Appartement</option>
+            </select>
+
+            <label for="area">Surface en m²:</label>
+            <input type="number" id="area" name="area" required>
+
+            <label for="country">Pays:</label>
+            <input type="text" id="country" name="country" required>
+
+            <label for="city">Ville:</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="price">Prix en euros:</label>
+            <input type="number" id="price" name="price" required>
+
+            <label for="rooms">Nombre de pièces:</label>
+            <input type="number" id="rooms" name="rooms" required>
+
+            <label for="bathrooms">Nombre de salles de bain:</label>
+            <input type="number" id="bathrooms" name="bathrooms" required>
+
+            <label for="image1">Photo 1:</label>
+            <input type="file" id="image1" name="image1" accept="image/*" required>
+
+            <label for="image2">Photo 2:</label>
+            <input type="file" id="image2" name="image2" accept="image/*" required>
+
+            <label for="backgroundImage">Image de fond:</label>
+            <input type="file" id="backgroundImage" name="backgroundImage" accept="image/*" required>
+
+            <button type="button" id="submitBtn">Soumettre</button>
+            <div id="successContainer"></div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
