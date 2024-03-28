@@ -6,6 +6,7 @@ const LocalStrategy = require('passport-local').Strategy;
 const bcrypt = require('bcrypt');
 const flash = require('connect-flash');
 const app = express();
+const phpExpress = require('php-express')();
 
 // Configuration de MongoDB
 mongoose.connect('mongodb://localhost:27017/immo', {
@@ -60,6 +61,11 @@ app.use((req, res, next) => {
   res.locals.user = req.user;
   next();
 });
+
+//php
+app.engine('php', phpExpress.engine);
+app.set('view engine', 'php');
+app.use(phpExpress.router);
 
 // Routes
 app.get('/', (req, res) => {
