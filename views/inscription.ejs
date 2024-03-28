@@ -1,36 +1,66 @@
+<!-- public/inscription.ejs -->
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
-    <title>Accueil</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/style.css">
+        <!-- Ajout de la bibliothèque Font Awesome pour les icônes -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <title>Inscription</title>
+    </head>
 <body>
     <header>
         <nav>
             <div class="logo">UAP Immo</div>
             <ul>
-                <li><a href="/">Accueil</a></li>
-                <li><a href="/inscription">Inscription</a></li>
                 <% if (user) { %>
-                    <!-- Si l'utilisateur est connecté -->
                     <li><a href="/deconnexion">Déconnexion</a></li>
                 <% } else { %>
-                    <!-- Si l'utilisateur n'est pas connecté -->
-                    <li><a href="/connexion" class="button">Connexion</a></li>
+                    <li><a href="/connexion">Connexion</a></li>
                 <% } %>
+                <li><a href="/inscription">Inscription</a></li>
             </ul>
         </nav>
     </header>
     <div class="container">
-        
-            <h2>Accueil</h2>
-            
+        <section class="form-container">
+            <h2>Inscription</h2>
+            <form action="/inscription" method="post">
+                <label for="username">Nom d'utilisateur:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="email">Adresse e-mail:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Mot de passe:</label>
+                <div class="password-field">
+                    <input type="password" id="password" name="password" required>
+                    <button type="button" id="togglePassword">
+                        <i class="far fa-eye" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <label for="passwordConfirmation">Confirmer le mot de passe:</label>
+                <input type="password" id="passwordConfirmation" name="passwordConfirmation" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+            <p>Déjà un compte? <a href="/connexion" id="link-form">Connectez-vous ici</a>.</p>
+        </section>
     </div>
 
     <footer>
         <p>&copy; 2024 UAP Immo. Tous droits réservés.</p>
     </footer>
+    <script>
+        document.getElementById("togglePassword").addEventListener("click", function() {
+            var passwordField = document.getElementById("password");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                this.innerHTML = '<i class="far fa-eye-slash" aria-hidden="true"></i>'; // Utilisation de l'icône "eye-slash" pour masquer le mot de passe
+            } else {
+                passwordField.type = "password";
+                this.innerHTML = '<i class="far fa-eye" aria-hidden="true"></i>'; // Utilisation de l'icône "eye" pour afficher le mot de passe
+            }
+        });
+    </script>
 </body>
 </html>
