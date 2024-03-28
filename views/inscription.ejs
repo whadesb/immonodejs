@@ -78,11 +78,20 @@
       </section>      
     </div>
   </section>
-  <!-- Bootstrap JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <!-- Custom JS -->
-  <script src="scripts.js"></script>
+      <script>
+        document.getElementById("togglePassword").addEventListener("click", function() {
+            var passwordField = document.getElementById("password");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                this.innerHTML = '<i class="far fa-eye-slash" aria-hidden="true"></i>'; // Utilisation de l'icône "eye-slash" pour masquer le mot de passe
+            } else {
+                passwordField.type = "password";
+                this.innerHTML = '<i class="far fa-eye" aria-hidden="true"></i>'; // Utilisation de l'icône "eye" pour afficher le mot de passe
+            }
+        });
+    </script>
 </body>
 </html>
