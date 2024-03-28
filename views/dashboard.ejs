@@ -1,36 +1,58 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - UAP Immo</title>
     <link rel="stylesheet" href="/style.css">
+    <title>Tableau de bord</title>
 </head>
 <body>
     <header>
-        <h1 class="logo">UAP Immo</h1>
+        <nav>
+            <div class="logo">UAP Immo</div>
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/inscription">Inscription</a></li>
+                <% if (user) { %>
+                    <!-- Si l'utilisateur est connecté -->
+                    <li><a href="/deconnexion">Déconnexion</a></li>
+                <% } else { %>
+                    <!-- Si l'utilisateur n'est pas connecté -->
+                    <li><a href="/connexion">Connexion</a></li>
+                <% } %>
+            </ul>
+        </nav>
     </header>
-    <main>
-        <div class="dashboard">
-            <nav class="menu">
+
+    <section class="dashboard">
+        <div class="cards">
+            <div class="card welcome-card">
+                <h2>Bienvenue sur votre Tableau de bord, <%= user.username %>!</h2>
+            </div>
+            <div class="card">
+                <h3>Titre de la première carte</h3>
+                <p>Description de la première carte.</p>
                 <ul>
-                    <li><a href="#profil">Profil</a></li>
-                    <li><a href="#modifier-mot-de-passe">Modifier mot de passe</a></li>
-                    <li><a href="#section-template">Section Template</a></li>
-                    <!-- Ajoutez d'autres sections ici -->
+                    <li>Élément 1</li>
+                    <li>Élément 2</li>
+                    <li>Élément 3</li>
                 </ul>
-            </nav>
-            <section class="content">
-                <h2 class="dashboard-h2">Profil</h2>
-                <div class="profile-info">
-                    <p><strong>Nom:</strong> <%= user.username %></p>
-                    <p><strong>Prénom:</strong> <%= user.firstname %></p>
-                    <p><strong>Identifiant:</strong> <%= user.id %></p>
-                    <!-- Ajoutez d'autres informations de profil ici -->
-                </div>
-            </section>
+                <a href="#">Voir plus</a>
+            </div>
+            <div class="card">
+                <h3>Titre de la deuxième carte</h3>
+                <p>Description de la deuxième carte.</p>
+                <ul>
+                    <li>Élément A</li>
+                    <li>Élément B</li>
+                    <li>Élément C</li>
+                </ul>
+                <a href="#">Voir plus</a>
+            </div>
+            <!-- Ajoutez plus de cartes selon vos besoins -->
         </div>
-    </main>
+    </section>
+
     <footer>
         <p>&copy; 2024 UAP Immo. Tous droits réservés.</p>
     </footer>
