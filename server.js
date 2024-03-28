@@ -11,6 +11,7 @@ const app = express();
 mongoose.connect('mongodb://18.132.63.195:27017/mydatabase');
 
 // Configuration d'Express
+app.use(express.static('images'));
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
