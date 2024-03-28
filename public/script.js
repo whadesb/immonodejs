@@ -10,7 +10,7 @@ function generateLandingPage() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             const fileName = xhr.responseText;
             const successMessage = `Votre landing page a été créée avec succès. Voici le lien :`;
-            const link = `www.zebrito.fr/${fileName}`;
+            const link = `http://18.132.63.195:3000/${fileName}`;
             const successContainer = document.createElement('div');
 
             successContainer.innerHTML = `
