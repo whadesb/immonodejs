@@ -1,3 +1,7 @@
+.logo {
+  width: 150px; /* Taille souhaitée pour le logo */
+  height: auto; /* Pour conserver les proportions de l'image */
+}
 .top-bar {
   padding: 30px 40px; /* Augmenter la hauteur de la top bar */
 }
