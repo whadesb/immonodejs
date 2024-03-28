@@ -67,6 +67,12 @@ app.engine('php', phpExpress.engine);
 app.set('view engine', 'php');
 app.use(phpExpress.router);
 
+// Définir le répertoire racine pour les fichiers PHP
+phpExpress.root(__dirname + '/php');
+
+// Utiliser phpExpress.router pour gérer les requêtes PHP
+app.all(/.+\.php$/, phpExpress.router);
+
 // Routes
 app.get('/', (req, res) => {
   res.render('index');
